@@ -1,0 +1,1685 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		590867F224C49D2F00D40A21 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 590867F124C49D2F00D40A21 /* main.cpp */; };
+		590868AF24C49D4F00D40A21 /* LucidaConsoleFont.c in Sources */ = {isa = PBXBuildFile; fileRef = 5908687924C49D4F00D40A21 /* LucidaConsoleFont.c */; };
+		590868B024C49D4F00D40A21 /* ucg_dev_ic_ld50t6160.c in Sources */ = {isa = PBXBuildFile; fileRef = 5908687A24C49D4F00D40A21 /* ucg_dev_ic_ld50t6160.c */; };
+		590868B124C49D4F00D40A21 /* ucg_ccs.c in Sources */ = {isa = PBXBuildFile; fileRef = 5908687B24C49D4F00D40A21 /* ucg_ccs.c */; };
+		590868B224C49D4F00D40A21 /* ucg_dev_tft_128x160_st7735.c in Sources */ = {isa = PBXBuildFile; fileRef = 5908687C24C49D4F00D40A21 /* ucg_dev_tft_128x160_st7735.c */; };
+		590868B324C49D4F00D40A21 /* ucg_dev_ic_ssd1331.c in Sources */ = {isa = PBXBuildFile; fileRef = 5908687D24C49D4F00D40A21 /* ucg_dev_ic_ssd1331.c */; };
+		590868B424C49D4F00D40A21 /* ucg_polygon.c in Sources */ = {isa = PBXBuildFile; fileRef = 5908687E24C49D4F00D40A21 /* ucg_polygon.c */; };
+		590868B524C49D4F00D40A21 /* ucg_font.c in Sources */ = {isa = PBXBuildFile; fileRef = 5908687F24C49D4F00D40A21 /* ucg_font.c */; };
+		590868B624C49D4F00D40A21 /* ucg_line.c in Sources */ = {isa = PBXBuildFile; fileRef = 5908688024C49D4F00D40A21 /* ucg_line.c */; };
+		590868B724C49D4F00D40A21 /* ucg_init.c in Sources */ = {isa = PBXBuildFile; fileRef = 5908688124C49D4F00D40A21 /* ucg_init.c */; };
+		590868B824C49D4F00D40A21 /* ucg_dev_tft_132x132_pcf8833.c in Sources */ = {isa = PBXBuildFile; fileRef = 5908688224C49D4F00D40A21 /* ucg_dev_tft_132x132_pcf8833.c */; };
+		590868B924C49D4F00D40A21 /* ucg_box.c in Sources */ = {isa = PBXBuildFile; fileRef = 5908688324C49D4F00D40A21 /* ucg_box.c */; };
+		590868BA24C49D4F00D40A21 /* ucg_dev_ic_ili9486.c in Sources */ = {isa = PBXBuildFile; fileRef = 5908688424C49D4F00D40A21 /* ucg_dev_ic_ili9486.c */; };
+		590868BB24C49D4F00D40A21 /* ucg_circle.c in Sources */ = {isa = PBXBuildFile; fileRef = 5908688524C49D4F00D40A21 /* ucg_circle.c */; };
+		590868BC24C49D4F00D40A21 /* ucg_dev_default_cb.c in Sources */ = {isa = PBXBuildFile; fileRef = 5908688624C49D4F00D40A21 /* ucg_dev_default_cb.c */; };
+		590868BD24C49D4F00D40A21 /* ucg_dev_oled_128x128_univision.c in Sources */ = {isa = PBXBuildFile; fileRef = 5908688724C49D4F00D40A21 /* ucg_dev_oled_128x128_univision.c */; };
+		590868BE24C49D4F00D40A21 /* ucg_dev_ic_ili9325.c in Sources */ = {isa = PBXBuildFile; fileRef = 5908688824C49D4F00D40A21 /* ucg_dev_ic_ili9325.c */; };
+		590868BF24C49D4F00D40A21 /* ucg_clip.c in Sources */ = {isa = PBXBuildFile; fileRef = 5908688924C49D4F00D40A21 /* ucg_clip.c */; };
+		590868C024C49D4F00D40A21 /* ucg_dev_tft_240x320_ili9325_spi.c in Sources */ = {isa = PBXBuildFile; fileRef = 5908688A24C49D4F00D40A21 /* ucg_dev_tft_240x320_ili9325_spi.c */; };
+		590868C124C49D4F00D40A21 /* ucg_dev_ic_hx8352c.c in Sources */ = {isa = PBXBuildFile; fileRef = 5908688B24C49D4F00D40A21 /* ucg_dev_ic_hx8352c.c */; };
+		590868C224C49D4F00D40A21 /* ucg_dev_ic_ili9325_spi.c in Sources */ = {isa = PBXBuildFile; fileRef = 5908688C24C49D4F00D40A21 /* ucg_dev_ic_ili9325_spi.c */; };
+		590868C324C49D4F00D40A21 /* ucg_dev_tft_240x320_ssd1289.c in Sources */ = {isa = PBXBuildFile; fileRef = 5908688D24C49D4F00D40A21 /* ucg_dev_tft_240x320_ssd1289.c */; };
+		590868C424C49D4F00D40A21 /* ucg_dev_tft_128x128_ili9163.c in Sources */ = {isa = PBXBuildFile; fileRef = 5908688E24C49D4F00D40A21 /* ucg_dev_tft_128x128_ili9163.c */; };
+		590868C524C49D4F00D40A21 /* ucg_com_msg_api.c in Sources */ = {isa = PBXBuildFile; fileRef = 5908688F24C49D4F00D40A21 /* ucg_com_msg_api.c */; };
+		590868C624C49D4F00D40A21 /* ucg_dev_ic_seps225.c in Sources */ = {isa = PBXBuildFile; fileRef = 5908689024C49D4F00D40A21 /* ucg_dev_ic_seps225.c */; };
+		590868C724C49D4F00D40A21 /* ucg_pixel.c in Sources */ = {isa = PBXBuildFile; fileRef = 5908689124C49D4F00D40A21 /* ucg_pixel.c */; };
+		590868C824C49D4F00D40A21 /* ucg_dev_oled_96x64_univision.c in Sources */ = {isa = PBXBuildFile; fileRef = 5908689224C49D4F00D40A21 /* ucg_dev_oled_96x64_univision.c */; };
+		590868C924C49D4F00D40A21 /* ucg_scale.c in Sources */ = {isa = PBXBuildFile; fileRef = 5908689324C49D4F00D40A21 /* ucg_scale.c */; };
+		590868CA24C49D4F00D40A21 /* ucg_dev_tft_240x400_hx8352c.c in Sources */ = {isa = PBXBuildFile; fileRef = 5908689424C49D4F00D40A21 /* ucg_dev_tft_240x400_hx8352c.c */; };
+		590868CB24C49D4F00D40A21 /* ucg_dev_ic_ili9341.c in Sources */ = {isa = PBXBuildFile; fileRef = 5908689524C49D4F00D40A21 /* ucg_dev_ic_ili9341.c */; };
+		590868CC24C49D4F00D40A21 /* ucg_dev_ic_st7735.c in Sources */ = {isa = PBXBuildFile; fileRef = 5908689624C49D4F00D40A21 /* ucg_dev_ic_st7735.c */; };
+		590868CD24C49D4F00D40A21 /* ucg_vector_font_data.c in Sources */ = {isa = PBXBuildFile; fileRef = 5908689724C49D4F00D40A21 /* ucg_vector_font_data.c */; };
+		590868CE24C49D4F00D40A21 /* ucg_bitmap.c in Sources */ = {isa = PBXBuildFile; fileRef = 5908689824C49D4F00D40A21 /* ucg_bitmap.c */; };
+		590868CF24C49D4F00D40A21 /* ucg_dev_oled_160x128_samsung.c in Sources */ = {isa = PBXBuildFile; fileRef = 5908689924C49D4F00D40A21 /* ucg_dev_oled_160x128_samsung.c */; };
+		590868D024C49D4F00D40A21 /* ucg_dev_oled_128x128_ft.c in Sources */ = {isa = PBXBuildFile; fileRef = 5908689A24C49D4F00D40A21 /* ucg_dev_oled_128x128_ft.c */; };
+		590868D124C49D4F00D40A21 /* ucg_rotate.c in Sources */ = {isa = PBXBuildFile; fileRef = 5908689B24C49D4F00D40A21 /* ucg_rotate.c */; };
+		590868D224C49D4F00D40A21 /* ucg_dev_msg_api.c in Sources */ = {isa = PBXBuildFile; fileRef = 5908689C24C49D4F00D40A21 /* ucg_dev_msg_api.c */; };
+		590868D324C49D4F00D40A21 /* ucg_dev_ic_ssd1351.c in Sources */ = {isa = PBXBuildFile; fileRef = 5908689D24C49D4F00D40A21 /* ucg_dev_ic_ssd1351.c */; };
+		590868D424C49D4F00D40A21 /* ucg_dev_oled_128x128_ilsoft.c in Sources */ = {isa = PBXBuildFile; fileRef = 5908689E24C49D4F00D40A21 /* ucg_dev_oled_128x128_ilsoft.c */; };
+		590868D524C49D4F00D40A21 /* ucg_dev_ic_pcf8833.c in Sources */ = {isa = PBXBuildFile; fileRef = 5908689F24C49D4F00D40A21 /* ucg_dev_ic_pcf8833.c */; };
+		590868D624C49D4F00D40A21 /* ucg_dev_tft_240x320_ili9341.c in Sources */ = {isa = PBXBuildFile; fileRef = 590868A024C49D4F00D40A21 /* ucg_dev_tft_240x320_ili9341.c */; };
+		590868D724C49D4F00D40A21 /* ucg_dev_ic_ssd1289.c in Sources */ = {isa = PBXBuildFile; fileRef = 590868A124C49D4F00D40A21 /* ucg_dev_ic_ssd1289.c */; };
+		590868D824C49D4F00D40A21 /* ucg_dev_tft_240x320_itdb02.c in Sources */ = {isa = PBXBuildFile; fileRef = 590868A224C49D4F00D40A21 /* ucg_dev_tft_240x320_itdb02.c */; };
+		590868D924C49D4F00D40A21 /* ucg_dev_ic_ili9163.c in Sources */ = {isa = PBXBuildFile; fileRef = 590868A324C49D4F00D40A21 /* ucg_dev_ic_ili9163.c */; };
+		590868DA24C49D4F00D40A21 /* ucg_pixel_font_data.c in Sources */ = {isa = PBXBuildFile; fileRef = 590868A524C49D4F00D40A21 /* ucg_pixel_font_data.c */; };
+		590868DB24C49D4F00D40A21 /* ucg_dev_tft_320x480_ili9486.c in Sources */ = {isa = PBXBuildFile; fileRef = 590868A624C49D4F00D40A21 /* ucg_dev_tft_320x480_ili9486.c */; };
+		590868DC24C49D4F00D40A21 /* Ucglib.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 590868A824C49D4F00D40A21 /* Ucglib.cpp */; };
+		590868DF24C4A3E700D40A21 /* Filter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 590868DE24C4A3E700D40A21 /* Filter.cpp */; };
+		590868E124C4A55600D40A21 /* LowPassFilter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 590868E024C4A55600D40A21 /* LowPassFilter.cpp */; };
+		590868E524C4A56800D40A21 /* HighPassFilter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 590868E424C4A56800D40A21 /* HighPassFilter.cpp */; };
+		5928684D24C49D2F00D40A21 /* DisplayFearTestUno.ino in Sources */ = {isa = PBXBuildFile; fileRef = 5908684D24C49D2F00D40A21 /* DisplayFearTestUno.ino */; };
+		AA2A200719182437AA000005 /* Arduino.h in Sources */ = {isa = PBXBuildFile; fileRef = AAAA200719182437AA000005 /* Arduino.h */; };
+		AA2A200719182437AA000006 /* Client.h in Sources */ = {isa = PBXBuildFile; fileRef = AAAA200719182437AA000006 /* Client.h */; };
+		AA2A200719182437AA000007 /* HardwareSerial.h in Sources */ = {isa = PBXBuildFile; fileRef = AAAA200719182437AA000007 /* HardwareSerial.h */; };
+		AA2A200719182437AA000008 /* HardwareSerial_private.h in Sources */ = {isa = PBXBuildFile; fileRef = AAAA200719182437AA000008 /* HardwareSerial_private.h */; };
+		AA2A200719182437AA000009 /* IPAddress.h in Sources */ = {isa = PBXBuildFile; fileRef = AAAA200719182437AA000009 /* IPAddress.h */; };
+		AA2A200719182437AA00000A /* PluggableUSB.h in Sources */ = {isa = PBXBuildFile; fileRef = AAAA200719182437AA00000A /* PluggableUSB.h */; };
+		AA2A200719182437AA00000B /* Print.h in Sources */ = {isa = PBXBuildFile; fileRef = AAAA200719182437AA00000B /* Print.h */; };
+		AA2A200719182437AA00000C /* Printable.h in Sources */ = {isa = PBXBuildFile; fileRef = AAAA200719182437AA00000C /* Printable.h */; };
+		AA2A200719182437AA00000D /* Server.h in Sources */ = {isa = PBXBuildFile; fileRef = AAAA200719182437AA00000D /* Server.h */; };
+		AA2A200719182437AA00000E /* Stream.h in Sources */ = {isa = PBXBuildFile; fileRef = AAAA200719182437AA00000E /* Stream.h */; };
+		AA2A200719182437AA00000F /* USBAPI.h in Sources */ = {isa = PBXBuildFile; fileRef = AAAA200719182437AA00000F /* USBAPI.h */; };
+		AA2A200719182437AA000010 /* USBCore.h in Sources */ = {isa = PBXBuildFile; fileRef = AAAA200719182437AA000010 /* USBCore.h */; };
+		AA2A200719182437AA000011 /* USBDesc.h in Sources */ = {isa = PBXBuildFile; fileRef = AAAA200719182437AA000011 /* USBDesc.h */; };
+		AA2A200719182437AA000012 /* Udp.h in Sources */ = {isa = PBXBuildFile; fileRef = AAAA200719182437AA000012 /* Udp.h */; };
+		AA2A200719182437AA000013 /* WCharacter.h in Sources */ = {isa = PBXBuildFile; fileRef = AAAA200719182437AA000013 /* WCharacter.h */; };
+		AA2A200719182437AA000014 /* WString.h in Sources */ = {isa = PBXBuildFile; fileRef = AAAA200719182437AA000014 /* WString.h */; };
+		AA2A200719182437AA000015 /* binary.h in Sources */ = {isa = PBXBuildFile; fileRef = AAAA200719182437AA000015 /* binary.h */; };
+		AA2A200719182437AA000016 /* new.h in Sources */ = {isa = PBXBuildFile; fileRef = AAAA200719182437AA000016 /* new.h */; };
+		AA2A200719182437AA000017 /* wiring_private.h in Sources */ = {isa = PBXBuildFile; fileRef = AAAA200719182437AA000017 /* wiring_private.h */; };
+		AA2A200719182437AA00001B /* EEPROM.h in Sources */ = {isa = PBXBuildFile; fileRef = AAAA200719182437AA00001B /* EEPROM.h */; };
+		AA2A200719182437AA00001E /* HID.h in Sources */ = {isa = PBXBuildFile; fileRef = AAAA200719182437AA00001E /* HID.h */; };
+		AA2A200719182437AA000021 /* SPI.h in Sources */ = {isa = PBXBuildFile; fileRef = AAAA200719182437AA000021 /* SPI.h */; };
+		AA2A200719182437AA000024 /* SoftwareSerial.h in Sources */ = {isa = PBXBuildFile; fileRef = AAAA200719182437AA000024 /* SoftwareSerial.h */; };
+		AA2A200719182437AA000027 /* Wire.h in Sources */ = {isa = PBXBuildFile; fileRef = AAAA200719182437AA000027 /* Wire.h */; };
+		AA2A200719182437AA000029 /* twi.h in Sources */ = {isa = PBXBuildFile; fileRef = AAAA200719182437AA000029 /* twi.h */; };
+		AA2A200719182437AA00002C /* pins_arduino.h in Sources */ = {isa = PBXBuildFile; fileRef = AAAA200719182437AA00002C /* pins_arduino.h */; };
+		AA2A200719182437AA00002E /* pins_arduino.h in Sources */ = {isa = PBXBuildFile; fileRef = AAAA200719182437AA00002E /* pins_arduino.h */; };
+		AA2A200719182437AA000030 /* pins_arduino.h in Sources */ = {isa = PBXBuildFile; fileRef = AAAA200719182437AA000030 /* pins_arduino.h */; };
+		AA2A200719182437AA000032 /* pins_arduino.h in Sources */ = {isa = PBXBuildFile; fileRef = AAAA200719182437AA000032 /* pins_arduino.h */; };
+		AA2A200719182437AA000034 /* pins_arduino.h in Sources */ = {isa = PBXBuildFile; fileRef = AAAA200719182437AA000034 /* pins_arduino.h */; };
+		AA2A200719182437AA000036 /* pins_arduino.h in Sources */ = {isa = PBXBuildFile; fileRef = AAAA200719182437AA000036 /* pins_arduino.h */; };
+		AA2A200719182437AA000038 /* pins_arduino.h in Sources */ = {isa = PBXBuildFile; fileRef = AAAA200719182437AA000038 /* pins_arduino.h */; };
+		AA2A200719182437AA00003A /* pins_arduino.h in Sources */ = {isa = PBXBuildFile; fileRef = AAAA200719182437AA00003A /* pins_arduino.h */; };
+		AA2A200719182437AA00003C /* pins_arduino.h in Sources */ = {isa = PBXBuildFile; fileRef = AAAA200719182437AA00003C /* pins_arduino.h */; };
+		AA2A200719182437AA00003E /* pins_arduino.h in Sources */ = {isa = PBXBuildFile; fileRef = AAAA200719182437AA00003E /* pins_arduino.h */; };
+		AA2A200719182437AA000040 /* pins_arduino.h in Sources */ = {isa = PBXBuildFile; fileRef = AAAA200719182437AA000040 /* pins_arduino.h */; };
+		AA2A200719182437AA000044 /* Arduino.h in Sources */ = {isa = PBXBuildFile; fileRef = AAAA200719182437AA000044 /* Arduino.h */; };
+		AA2A200719182437AA000045 /* Client.h in Sources */ = {isa = PBXBuildFile; fileRef = AAAA200719182437AA000045 /* Client.h */; };
+		AA2A200719182437AA000046 /* HardwareSerial.h in Sources */ = {isa = PBXBuildFile; fileRef = AAAA200719182437AA000046 /* HardwareSerial.h */; };
+		AA2A200719182437AA000047 /* IPAddress.h in Sources */ = {isa = PBXBuildFile; fileRef = AAAA200719182437AA000047 /* IPAddress.h */; };
+		AA2A200719182437AA000048 /* Print.h in Sources */ = {isa = PBXBuildFile; fileRef = AAAA200719182437AA000048 /* Print.h */; };
+		AA2A200719182437AA000049 /* Printable.h in Sources */ = {isa = PBXBuildFile; fileRef = AAAA200719182437AA000049 /* Printable.h */; };
+		AA2A200719182437AA00004A /* Reset.h in Sources */ = {isa = PBXBuildFile; fileRef = AAAA200719182437AA00004A /* Reset.h */; };
+		AA2A200719182437AA00004B /* RingBuffer.h in Sources */ = {isa = PBXBuildFile; fileRef = AAAA200719182437AA00004B /* RingBuffer.h */; };
+		AA2A200719182437AA00004C /* Server.h in Sources */ = {isa = PBXBuildFile; fileRef = AAAA200719182437AA00004C /* Server.h */; };
+		AA2A200719182437AA00004D /* Stream.h in Sources */ = {isa = PBXBuildFile; fileRef = AAAA200719182437AA00004D /* Stream.h */; };
+		AA2A200719182437AA00004E /* Tone.h in Sources */ = {isa = PBXBuildFile; fileRef = AAAA200719182437AA00004E /* Tone.h */; };
+		AA2A200719182437AA00004F /* UARTClass.h in Sources */ = {isa = PBXBuildFile; fileRef = AAAA200719182437AA00004F /* UARTClass.h */; };
+		AA2A200719182437AA000050 /* USARTClass.h in Sources */ = {isa = PBXBuildFile; fileRef = AAAA200719182437AA000050 /* USARTClass.h */; };
+		AA2A200719182437AA000052 /* PluggableUSB.h in Sources */ = {isa = PBXBuildFile; fileRef = AAAA200719182437AA000052 /* PluggableUSB.h */; };
+		AA2A200719182437AA000053 /* USBAPI.h in Sources */ = {isa = PBXBuildFile; fileRef = AAAA200719182437AA000053 /* USBAPI.h */; };
+		AA2A200719182437AA000054 /* USBCore.h in Sources */ = {isa = PBXBuildFile; fileRef = AAAA200719182437AA000054 /* USBCore.h */; };
+		AA2A200719182437AA000055 /* USBDesc.h in Sources */ = {isa = PBXBuildFile; fileRef = AAAA200719182437AA000055 /* USBDesc.h */; };
+		AA2A200719182437AA000056 /* Udp.h in Sources */ = {isa = PBXBuildFile; fileRef = AAAA200719182437AA000056 /* Udp.h */; };
+		AA2A200719182437AA000057 /* WCharacter.h in Sources */ = {isa = PBXBuildFile; fileRef = AAAA200719182437AA000057 /* WCharacter.h */; };
+		AA2A200719182437AA000058 /* WInterrupts.h in Sources */ = {isa = PBXBuildFile; fileRef = AAAA200719182437AA000058 /* WInterrupts.h */; };
+		AA2A200719182437AA000059 /* WMath.h in Sources */ = {isa = PBXBuildFile; fileRef = AAAA200719182437AA000059 /* WMath.h */; };
+		AA2A200719182437AA00005A /* WString.h in Sources */ = {isa = PBXBuildFile; fileRef = AAAA200719182437AA00005A /* WString.h */; };
+		AA2A200719182437AA00005C /* dtostrf.h in Sources */ = {isa = PBXBuildFile; fileRef = AAAA200719182437AA00005C /* dtostrf.h */; };
+		AA2A200719182437AA00005D /* interrupt.h in Sources */ = {isa = PBXBuildFile; fileRef = AAAA200719182437AA00005D /* interrupt.h */; };
+		AA2A200719182437AA00005E /* pgmspace.h in Sources */ = {isa = PBXBuildFile; fileRef = AAAA200719182437AA00005E /* pgmspace.h */; };
+		AA2A200719182437AA00005F /* binary.h in Sources */ = {isa = PBXBuildFile; fileRef = AAAA200719182437AA00005F /* binary.h */; };
+		AA2A200719182437AA000060 /* itoa.h in Sources */ = {isa = PBXBuildFile; fileRef = AAAA200719182437AA000060 /* itoa.h */; };
+		AA2A200719182437AA000061 /* syscalls.h in Sources */ = {isa = PBXBuildFile; fileRef = AAAA200719182437AA000061 /* syscalls.h */; };
+		AA2A200719182437AA000062 /* watchdog.h in Sources */ = {isa = PBXBuildFile; fileRef = AAAA200719182437AA000062 /* watchdog.h */; };
+		AA2A200719182437AA000063 /* wiring.h in Sources */ = {isa = PBXBuildFile; fileRef = AAAA200719182437AA000063 /* wiring.h */; };
+		AA2A200719182437AA000064 /* wiring_analog.h in Sources */ = {isa = PBXBuildFile; fileRef = AAAA200719182437AA000064 /* wiring_analog.h */; };
+		AA2A200719182437AA000065 /* wiring_constants.h in Sources */ = {isa = PBXBuildFile; fileRef = AAAA200719182437AA000065 /* wiring_constants.h */; };
+		AA2A200719182437AA000066 /* wiring_digital.h in Sources */ = {isa = PBXBuildFile; fileRef = AAAA200719182437AA000066 /* wiring_digital.h */; };
+		AA2A200719182437AA000067 /* wiring_private.h in Sources */ = {isa = PBXBuildFile; fileRef = AAAA200719182437AA000067 /* wiring_private.h */; };
+		AA2A200719182437AA000068 /* wiring_pulse.h in Sources */ = {isa = PBXBuildFile; fileRef = AAAA200719182437AA000068 /* wiring_pulse.h */; };
+		AA2A200719182437AA000069 /* wiring_shift.h in Sources */ = {isa = PBXBuildFile; fileRef = AAAA200719182437AA000069 /* wiring_shift.h */; };
+		AA2A200719182437AA00006D /* HID.h in Sources */ = {isa = PBXBuildFile; fileRef = AAAA200719182437AA00006D /* HID.h */; };
+		AA2A200719182437AA000070 /* SPI.h in Sources */ = {isa = PBXBuildFile; fileRef = AAAA200719182437AA000070 /* SPI.h */; };
+		AA2A200719182437AA000073 /* Wire.h in Sources */ = {isa = PBXBuildFile; fileRef = AAAA200719182437AA000073 /* Wire.h */; };
+		AA2A200719182437AA00007D /* pins_arduino.h in Sources */ = {isa = PBXBuildFile; fileRef = AAAA200719182437AA00007D /* pins_arduino.h */; };
+		AA2A200719182437AA00007E /* variant.h in Sources */ = {isa = PBXBuildFile; fileRef = AAAA200719182437AA00007E /* variant.h */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		590867EE24C49D2F00D40A21 /* Index */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Index; sourceTree = BUILT_PRODUCTS_DIR; };
+		590867F124C49D2F00D40A21 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		590867F324C49D2F00D40A21 /* Makefile */ = {isa = PBXFileReference; explicitFileType = sourcecode.make; path = Makefile; sourceTree = "<group>"; };
+		590867F524C49D2F00D40A21 /* ReadMe.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = ReadMe.txt; sourceTree = "<group>"; };
+		590867F724C49D2F00D40A21 /* Sketchbook.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = Sketchbook.txt; sourceTree = "<group>"; };
+		590867F924C49D2F00D40A21 /* Arduino Due (Programming Port).xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Arduino Due (Programming Port).xcconfig"; sourceTree = "<group>"; };
+		590867FA24C49D2F00D40A21 /* Arduino Duemilanove.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Arduino Duemilanove.xcconfig"; sourceTree = "<group>"; };
+		590867FB24C49D2F00D40A21 /* Arduino Leonardo.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Arduino Leonardo.xcconfig"; sourceTree = "<group>"; };
+		590867FC24C49D2F00D40A21 /* Arduino Mega 2560.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Arduino Mega 2560.xcconfig"; sourceTree = "<group>"; };
+		590867FD24C49D2F00D40A21 /* Arduino Micro.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Arduino Micro.xcconfig"; sourceTree = "<group>"; };
+		590867FE24C49D2F00D40A21 /* Arduino Pro ATmega328-3.3V.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Arduino Pro ATmega328-3.3V.xcconfig"; sourceTree = "<group>"; };
+		590867FF24C49D2F00D40A21 /* Arduino Pro ATmega328-5V.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Arduino Pro ATmega328-5V.xcconfig"; sourceTree = "<group>"; };
+		5908680024C49D2F00D40A21 /* Arduino Mini ATmega168.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Arduino Mini ATmega168.xcconfig"; sourceTree = "<group>"; };
+		5908680124C49D2F00D40A21 /* Arduino Mini ATmega328.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Arduino Mini ATmega328.xcconfig"; sourceTree = "<group>"; };
+		5908680224C49D2F00D40A21 /* Arduino MKR Zero.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Arduino MKR Zero.xcconfig"; sourceTree = "<group>"; };
+		5908680324C49D2F00D40A21 /* Arduino Nano ATmega168.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Arduino Nano ATmega168.xcconfig"; sourceTree = "<group>"; };
+		5908680424C49D2F00D40A21 /* Arduino Nano ATmega328.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Arduino Nano ATmega328.xcconfig"; sourceTree = "<group>"; };
+		5908680524C49D2F00D40A21 /* Arduino Robot Control.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Arduino Robot Control.xcconfig"; sourceTree = "<group>"; };
+		5908680624C49D2F00D40A21 /* Arduino Robot Motor.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Arduino Robot Motor.xcconfig"; sourceTree = "<group>"; };
+		5908680724C49D2F00D40A21 /* Arduino Uno.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Arduino Uno.xcconfig"; sourceTree = "<group>"; };
+		5908680824C49D2F00D40A21 /* Arduino Yun (USB).xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Arduino Yun (USB).xcconfig"; sourceTree = "<group>"; };
+		5908680924C49D2F00D40A21 /* Arduino Zero (Programming Port).xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Arduino Zero (Programming Port).xcconfig"; sourceTree = "<group>"; };
+		5908680A24C49D2F00D40A21 /* Arduino M0 Pro (Programming Port).xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Arduino M0 Pro (Programming Port).xcconfig"; sourceTree = "<group>"; };
+		5908680B24C49D2F00D40A21 /* Arduino Tian (USB).xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Arduino Tian (USB).xcconfig"; sourceTree = "<group>"; };
+		5908680C24C49D2F00D40A21 /* nRF BBC micro-bit nRF51.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "nRF BBC micro-bit nRF51.xcconfig"; sourceTree = "<group>"; };
+		5908680D24C49D2F00D40A21 /* chipKIT DP32.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "chipKIT DP32.xcconfig"; sourceTree = "<group>"; };
+		5908680E24C49D2F00D40A21 /* chipKIT Max32.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "chipKIT Max32.xcconfig"; sourceTree = "<group>"; };
+		5908680F24C49D2F00D40A21 /* chipKIT uC32.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "chipKIT uC32.xcconfig"; sourceTree = "<group>"; };
+		5908681024C49D2F00D40A21 /* chipKIT Uno32.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "chipKIT Uno32.xcconfig"; sourceTree = "<group>"; };
+		5908681124C49D2F00D40A21 /* chipKIT WF32.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "chipKIT WF32.xcconfig"; sourceTree = "<group>"; };
+		5908681224C49D2F00D40A21 /* chipKIT WiFire Rev.AB.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "chipKIT WiFire Rev.AB.xcconfig"; sourceTree = "<group>"; };
+		5908681324C49D2F00D40A21 /* chipKIT WiFire Rev.C.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "chipKIT WiFire Rev.C.xcconfig"; sourceTree = "<group>"; };
+		5908681424C49D2F00D40A21 /* ESP8266.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = ESP8266.xcconfig; sourceTree = "<group>"; };
+		5908681524C49D2F00D40A21 /* NodeMCU 0.9 ESP-12.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "NodeMCU 0.9 ESP-12.xcconfig"; sourceTree = "<group>"; };
+		5908681624C49D2F00D40A21 /* NodeMCU 1.0 ESP-12E.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "NodeMCU 1.0 ESP-12E.xcconfig"; sourceTree = "<group>"; };
+		5908681724C49D2F00D40A21 /* LaunchPad MSP432P401R EMT.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "LaunchPad MSP432P401R EMT.xcconfig"; sourceTree = "<group>"; };
+		5908681824C49D2F00D40A21 /* LaunchPad CC3200 WiFi.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "LaunchPad CC3200 WiFi.xcconfig"; sourceTree = "<group>"; };
+		5908681924C49D2F00D40A21 /* LaunchPad LM4F120 Stellaris.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "LaunchPad LM4F120 Stellaris.xcconfig"; sourceTree = "<group>"; };
+		5908681A24C49D2F00D40A21 /* LaunchPad TM4C123 Tiva C.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "LaunchPad TM4C123 Tiva C.xcconfig"; sourceTree = "<group>"; };
+		5908681B24C49D2F00D40A21 /* LaunchPad TM4C129 Ethernet.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "LaunchPad TM4C129 Ethernet.xcconfig"; sourceTree = "<group>"; };
+		5908681C24C49D2F00D40A21 /* LaunchPad MSP430G2553.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "LaunchPad MSP430G2553.xcconfig"; sourceTree = "<group>"; };
+		5908681D24C49D2F00D40A21 /* LaunchPad MSP430G2553-ET.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "LaunchPad MSP430G2553-ET.xcconfig"; sourceTree = "<group>"; };
+		5908681E24C49D2F00D40A21 /* LaunchPad MSP430G2955.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "LaunchPad MSP430G2955.xcconfig"; sourceTree = "<group>"; };
+		5908681F24C49D2F00D40A21 /* LaunchPad MSP430FR2355.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "LaunchPad MSP430FR2355.xcconfig"; sourceTree = "<group>"; };
+		5908682024C49D2F00D40A21 /* LaunchPad MSP430FR2433.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "LaunchPad MSP430FR2433.xcconfig"; sourceTree = "<group>"; };
+		5908682124C49D2F00D40A21 /* LaunchPad MSP430FR4133.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "LaunchPad MSP430FR4133.xcconfig"; sourceTree = "<group>"; };
+		5908682224C49D2F00D40A21 /* LaunchPad MSP430F5529.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "LaunchPad MSP430F5529.xcconfig"; sourceTree = "<group>"; };
+		5908682324C49D2F00D40A21 /* LaunchPad MSP430FR5969.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "LaunchPad MSP430FR5969.xcconfig"; sourceTree = "<group>"; };
+		5908682424C49D2F00D40A21 /* LaunchPad MSP430FR5994.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "LaunchPad MSP430FR5994.xcconfig"; sourceTree = "<group>"; };
+		5908682524C49D2F00D40A21 /* LaunchPad MSP430FR6989.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "LaunchPad MSP430FR6989.xcconfig"; sourceTree = "<group>"; };
+		5908682624C49D2F00D40A21 /* Seeeduino v4.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Seeeduino v4.xcconfig"; sourceTree = "<group>"; };
+		5908682724C49D2F00D40A21 /* Seeeduino Xiao M0 (USB).xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Seeeduino Xiao M0 (USB).xcconfig"; sourceTree = "<group>"; };
+		5908682824C49D2F00D40A21 /* Seeeduino Xiao M0 (MSD).xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Seeeduino Xiao M0 (MSD).xcconfig"; sourceTree = "<group>"; };
+		5908682924C49D2F00D40A21 /* Teensy 2.0.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Teensy 2.0.xcconfig"; sourceTree = "<group>"; };
+		5908682A24C49D2F00D40A21 /* Teensy 3.0.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Teensy 3.0.xcconfig"; sourceTree = "<group>"; };
+		5908682B24C49D2F00D40A21 /* Teensy 3.1.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Teensy 3.1.xcconfig"; sourceTree = "<group>"; };
+		5908682C24C49D2F00D40A21 /* Teensy 3.2.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Teensy 3.2.xcconfig"; sourceTree = "<group>"; };
+		5908682D24C49D2F00D40A21 /* Teensy 3.5.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Teensy 3.5.xcconfig"; sourceTree = "<group>"; };
+		5908682E24C49D2F00D40A21 /* Teensy 3.6.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Teensy 3.6.xcconfig"; sourceTree = "<group>"; };
+		5908682F24C49D2F00D40A21 /* Teensy 4.0.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Teensy 4.0.xcconfig"; sourceTree = "<group>"; };
+		5908683024C49D2F00D40A21 /* Teensy LC.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Teensy LC.xcconfig"; sourceTree = "<group>"; };
+		5908683224C49D2F00D40A21 /* ArduinoAVR_180.mk */ = {isa = PBXFileReference; explicitFileType = sourcecode.make; path = ArduinoAVR_180.mk; sourceTree = "<group>"; };
+		5908683324C49D2F00D40A21 /* ArduinoAVR_181.mk */ = {isa = PBXFileReference; explicitFileType = sourcecode.make; path = ArduinoAVR_181.mk; sourceTree = "<group>"; };
+		5908683424C49D2F00D40A21 /* ArduinoSAM_180.mk */ = {isa = PBXFileReference; explicitFileType = sourcecode.make; path = ArduinoSAM_180.mk; sourceTree = "<group>"; };
+		5908683524C49D2F00D40A21 /* ArduinoSAMD_180.mk */ = {isa = PBXFileReference; explicitFileType = sourcecode.make; path = ArduinoSAMD_180.mk; sourceTree = "<group>"; };
+		5908683624C49D2F00D40A21 /* nRF51_Boards_180.mk */ = {isa = PBXFileReference; explicitFileType = sourcecode.make; path = nRF51_Boards_180.mk; sourceTree = "<group>"; };
+		5908683724C49D2F00D40A21 /* chipKIT_180.mk */ = {isa = PBXFileReference; explicitFileType = sourcecode.make; path = chipKIT_180.mk; sourceTree = "<group>"; };
+		5908683824C49D2F00D40A21 /* EnergiaMSP430_18.mk */ = {isa = PBXFileReference; explicitFileType = sourcecode.make; path = EnergiaMSP430_18.mk; sourceTree = "<group>"; };
+		5908683924C49D2F00D40A21 /* EnergiaMSP430_19.mk */ = {isa = PBXFileReference; explicitFileType = sourcecode.make; path = EnergiaMSP430_19.mk; sourceTree = "<group>"; };
+		5908683A24C49D2F00D40A21 /* EnergiaMSP432_R_EMT_18.mk */ = {isa = PBXFileReference; explicitFileType = sourcecode.make; path = EnergiaMSP432_R_EMT_18.mk; sourceTree = "<group>"; };
+		5908683B24C49D2F00D40A21 /* EnergiaTIVAC_18.mk */ = {isa = PBXFileReference; explicitFileType = sourcecode.make; path = EnergiaTIVAC_18.mk; sourceTree = "<group>"; };
+		5908683C24C49D2F00D40A21 /* EnergiaCC3200_18.mk */ = {isa = PBXFileReference; explicitFileType = sourcecode.make; path = EnergiaCC3200_18.mk; sourceTree = "<group>"; };
+		5908683D24C49D2F00D40A21 /* ESP8266_180.mk */ = {isa = PBXFileReference; explicitFileType = sourcecode.make; path = ESP8266_180.mk; sourceTree = "<group>"; };
+		5908683E24C49D2F00D40A21 /* SeeeduinoAVR_180.mk */ = {isa = PBXFileReference; explicitFileType = sourcecode.make; path = SeeeduinoAVR_180.mk; sourceTree = "<group>"; };
+		5908683F24C49D2F00D40A21 /* SeeeduinoSAMD_180.mk */ = {isa = PBXFileReference; explicitFileType = sourcecode.make; path = SeeeduinoSAMD_180.mk; sourceTree = "<group>"; };
+		5908684024C49D2F00D40A21 /* Teensy.mk */ = {isa = PBXFileReference; explicitFileType = sourcecode.make; path = Teensy.mk; sourceTree = "<group>"; };
+		5908684124C49D2F00D40A21 /* Teensy2.mk */ = {isa = PBXFileReference; explicitFileType = sourcecode.make; path = Teensy2.mk; sourceTree = "<group>"; };
+		5908684224C49D2F00D40A21 /* Teensy3.mk */ = {isa = PBXFileReference; explicitFileType = sourcecode.make; path = Teensy3.mk; sourceTree = "<group>"; };
+		5908684324C49D2F00D40A21 /* About.mk */ = {isa = PBXFileReference; explicitFileType = sourcecode.make; path = About.mk; sourceTree = "<group>"; };
+		5908684424C49D2F00D40A21 /* Step1.mk */ = {isa = PBXFileReference; explicitFileType = sourcecode.make; path = Step1.mk; sourceTree = "<group>"; };
+		5908684524C49D2F00D40A21 /* Step2.mk */ = {isa = PBXFileReference; explicitFileType = sourcecode.make; path = Step2.mk; sourceTree = "<group>"; };
+		5908684624C49D2F00D40A21 /* Avrdude.mk */ = {isa = PBXFileReference; explicitFileType = sourcecode.make; path = Avrdude.mk; sourceTree = "<group>"; };
+		5908684824C49D2F00D40A21 /* reset_1200.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = reset_1200.py; sourceTree = "<group>"; };
+		5908684A24C49D2F00D40A21 /* embedXcode_check */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = embedXcode_check; sourceTree = "<group>"; };
+		5908684B24C49D2F00D40A21 /* embedXcode_chrono */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = embedXcode_chrono; sourceTree = "<group>"; };
+		5908684C24C49D2F00D40A21 /* TemplateIcon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = TemplateIcon.icns; sourceTree = "<group>"; };
+		5908684D24C49D2F00D40A21 /* DisplayFearTestUno.ino */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; path = DisplayFearTestUno.ino; sourceTree = "<group>"; };
+		5908686324C49D4F00D40A21 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		5908686424C49D4F00D40A21 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		5908686724C49D4F00D40A21 /* HelloWorld.ino */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = HelloWorld.ino; sourceTree = "<group>"; };
+		5908686924C49D4F00D40A21 /* UcgLogo.ino */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = UcgLogo.ino; sourceTree = "<group>"; };
+		5908686B24C49D4F00D40A21 /* Box3D.ino */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Box3D.ino; sourceTree = "<group>"; };
+		5908686D24C49D4F00D40A21 /* Scale.ino */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Scale.ino; sourceTree = "<group>"; };
+		5908686F24C49D4F00D40A21 /* GraphicsTest.ino */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = GraphicsTest.ino; sourceTree = "<group>"; };
+		5908687124C49D4F00D40A21 /* HowToUseFonts.ino */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = HowToUseFonts.ino; sourceTree = "<group>"; };
+		5908687324C49D4F00D40A21 /* PowerDown.ino */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = PowerDown.ino; sourceTree = "<group>"; };
+		5908687524C49D4F00D40A21 /* FPS.ino */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FPS.ino; sourceTree = "<group>"; };
+		5908687624C49D4F00D40A21 /* library.properties */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = library.properties; sourceTree = "<group>"; };
+		5908687924C49D4F00D40A21 /* LucidaConsoleFont.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = LucidaConsoleFont.c; sourceTree = "<group>"; };
+		5908687A24C49D4F00D40A21 /* ucg_dev_ic_ld50t6160.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ucg_dev_ic_ld50t6160.c; sourceTree = "<group>"; };
+		5908687B24C49D4F00D40A21 /* ucg_ccs.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ucg_ccs.c; sourceTree = "<group>"; };
+		5908687C24C49D4F00D40A21 /* ucg_dev_tft_128x160_st7735.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ucg_dev_tft_128x160_st7735.c; sourceTree = "<group>"; };
+		5908687D24C49D4F00D40A21 /* ucg_dev_ic_ssd1331.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ucg_dev_ic_ssd1331.c; sourceTree = "<group>"; };
+		5908687E24C49D4F00D40A21 /* ucg_polygon.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ucg_polygon.c; sourceTree = "<group>"; };
+		5908687F24C49D4F00D40A21 /* ucg_font.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ucg_font.c; sourceTree = "<group>"; };
+		5908688024C49D4F00D40A21 /* ucg_line.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ucg_line.c; sourceTree = "<group>"; };
+		5908688124C49D4F00D40A21 /* ucg_init.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ucg_init.c; sourceTree = "<group>"; };
+		5908688224C49D4F00D40A21 /* ucg_dev_tft_132x132_pcf8833.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ucg_dev_tft_132x132_pcf8833.c; sourceTree = "<group>"; };
+		5908688324C49D4F00D40A21 /* ucg_box.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ucg_box.c; sourceTree = "<group>"; };
+		5908688424C49D4F00D40A21 /* ucg_dev_ic_ili9486.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ucg_dev_ic_ili9486.c; sourceTree = "<group>"; };
+		5908688524C49D4F00D40A21 /* ucg_circle.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ucg_circle.c; sourceTree = "<group>"; };
+		5908688624C49D4F00D40A21 /* ucg_dev_default_cb.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ucg_dev_default_cb.c; sourceTree = "<group>"; };
+		5908688724C49D4F00D40A21 /* ucg_dev_oled_128x128_univision.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ucg_dev_oled_128x128_univision.c; sourceTree = "<group>"; };
+		5908688824C49D4F00D40A21 /* ucg_dev_ic_ili9325.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ucg_dev_ic_ili9325.c; sourceTree = "<group>"; };
+		5908688924C49D4F00D40A21 /* ucg_clip.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ucg_clip.c; sourceTree = "<group>"; };
+		5908688A24C49D4F00D40A21 /* ucg_dev_tft_240x320_ili9325_spi.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ucg_dev_tft_240x320_ili9325_spi.c; sourceTree = "<group>"; };
+		5908688B24C49D4F00D40A21 /* ucg_dev_ic_hx8352c.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ucg_dev_ic_hx8352c.c; sourceTree = "<group>"; };
+		5908688C24C49D4F00D40A21 /* ucg_dev_ic_ili9325_spi.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ucg_dev_ic_ili9325_spi.c; sourceTree = "<group>"; };
+		5908688D24C49D4F00D40A21 /* ucg_dev_tft_240x320_ssd1289.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ucg_dev_tft_240x320_ssd1289.c; sourceTree = "<group>"; };
+		5908688E24C49D4F00D40A21 /* ucg_dev_tft_128x128_ili9163.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ucg_dev_tft_128x128_ili9163.c; sourceTree = "<group>"; };
+		5908688F24C49D4F00D40A21 /* ucg_com_msg_api.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ucg_com_msg_api.c; sourceTree = "<group>"; };
+		5908689024C49D4F00D40A21 /* ucg_dev_ic_seps225.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ucg_dev_ic_seps225.c; sourceTree = "<group>"; };
+		5908689124C49D4F00D40A21 /* ucg_pixel.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ucg_pixel.c; sourceTree = "<group>"; };
+		5908689224C49D4F00D40A21 /* ucg_dev_oled_96x64_univision.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ucg_dev_oled_96x64_univision.c; sourceTree = "<group>"; };
+		5908689324C49D4F00D40A21 /* ucg_scale.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ucg_scale.c; sourceTree = "<group>"; };
+		5908689424C49D4F00D40A21 /* ucg_dev_tft_240x400_hx8352c.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ucg_dev_tft_240x400_hx8352c.c; sourceTree = "<group>"; };
+		5908689524C49D4F00D40A21 /* ucg_dev_ic_ili9341.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ucg_dev_ic_ili9341.c; sourceTree = "<group>"; };
+		5908689624C49D4F00D40A21 /* ucg_dev_ic_st7735.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ucg_dev_ic_st7735.c; sourceTree = "<group>"; };
+		5908689724C49D4F00D40A21 /* ucg_vector_font_data.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ucg_vector_font_data.c; sourceTree = "<group>"; };
+		5908689824C49D4F00D40A21 /* ucg_bitmap.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ucg_bitmap.c; sourceTree = "<group>"; };
+		5908689924C49D4F00D40A21 /* ucg_dev_oled_160x128_samsung.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ucg_dev_oled_160x128_samsung.c; sourceTree = "<group>"; };
+		5908689A24C49D4F00D40A21 /* ucg_dev_oled_128x128_ft.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ucg_dev_oled_128x128_ft.c; sourceTree = "<group>"; };
+		5908689B24C49D4F00D40A21 /* ucg_rotate.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ucg_rotate.c; sourceTree = "<group>"; };
+		5908689C24C49D4F00D40A21 /* ucg_dev_msg_api.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ucg_dev_msg_api.c; sourceTree = "<group>"; };
+		5908689D24C49D4F00D40A21 /* ucg_dev_ic_ssd1351.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ucg_dev_ic_ssd1351.c; sourceTree = "<group>"; };
+		5908689E24C49D4F00D40A21 /* ucg_dev_oled_128x128_ilsoft.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ucg_dev_oled_128x128_ilsoft.c; sourceTree = "<group>"; };
+		5908689F24C49D4F00D40A21 /* ucg_dev_ic_pcf8833.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ucg_dev_ic_pcf8833.c; sourceTree = "<group>"; };
+		590868A024C49D4F00D40A21 /* ucg_dev_tft_240x320_ili9341.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ucg_dev_tft_240x320_ili9341.c; sourceTree = "<group>"; };
+		590868A124C49D4F00D40A21 /* ucg_dev_ic_ssd1289.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ucg_dev_ic_ssd1289.c; sourceTree = "<group>"; };
+		590868A224C49D4F00D40A21 /* ucg_dev_tft_240x320_itdb02.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ucg_dev_tft_240x320_itdb02.c; sourceTree = "<group>"; };
+		590868A324C49D4F00D40A21 /* ucg_dev_ic_ili9163.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ucg_dev_ic_ili9163.c; sourceTree = "<group>"; };
+		590868A424C49D4F00D40A21 /* ucg.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ucg.h; sourceTree = "<group>"; };
+		590868A524C49D4F00D40A21 /* ucg_pixel_font_data.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ucg_pixel_font_data.c; sourceTree = "<group>"; };
+		590868A624C49D4F00D40A21 /* ucg_dev_tft_320x480_ili9486.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ucg_dev_tft_320x480_ili9486.c; sourceTree = "<group>"; };
+		590868A724C49D4F00D40A21 /* Ucglib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ucglib.h; sourceTree = "<group>"; };
+		590868A824C49D4F00D40A21 /* Ucglib.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Ucglib.cpp; sourceTree = "<group>"; };
+		590868AA24C49D4F00D40A21 /* ChangeLog */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ChangeLog; sourceTree = "<group>"; };
+		590868AB24C49D4F00D40A21 /* INSTALL.TXT */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = INSTALL.TXT; sourceTree = "<group>"; };
+		590868AC24C49D4F00D40A21 /* displays.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = displays.pdf; sourceTree = "<group>"; };
+		590868AD24C49D4F00D40A21 /* reference.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = reference.pdf; sourceTree = "<group>"; };
+		590868AE24C49D4F00D40A21 /* fontsize.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = fontsize.pdf; sourceTree = "<group>"; };
+		590868DD24C4A3E100D40A21 /* Filter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Filter.h; sourceTree = "<group>"; };
+		590868DE24C4A3E700D40A21 /* Filter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Filter.cpp; sourceTree = "<group>"; };
+		590868E024C4A55600D40A21 /* LowPassFilter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LowPassFilter.cpp; sourceTree = "<group>"; };
+		590868E224C4A55C00D40A21 /* LowPassFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LowPassFilter.h; sourceTree = "<group>"; };
+		590868E324C4A56400D40A21 /* HighPassFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HighPassFilter.h; sourceTree = "<group>"; };
+		590868E424C4A56800D40A21 /* HighPassFilter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = HighPassFilter.cpp; sourceTree = "<group>"; };
+		AAAA200719182437AA000005 /* Arduino.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Arduino.h; sourceTree = "<group>"; };
+		AAAA200719182437AA000006 /* Client.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Client.h; sourceTree = "<group>"; };
+		AAAA200719182437AA000007 /* HardwareSerial.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HardwareSerial.h; sourceTree = "<group>"; };
+		AAAA200719182437AA000008 /* HardwareSerial_private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HardwareSerial_private.h; sourceTree = "<group>"; };
+		AAAA200719182437AA000009 /* IPAddress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IPAddress.h; sourceTree = "<group>"; };
+		AAAA200719182437AA00000A /* PluggableUSB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PluggableUSB.h; sourceTree = "<group>"; };
+		AAAA200719182437AA00000B /* Print.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Print.h; sourceTree = "<group>"; };
+		AAAA200719182437AA00000C /* Printable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Printable.h; sourceTree = "<group>"; };
+		AAAA200719182437AA00000D /* Server.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Server.h; sourceTree = "<group>"; };
+		AAAA200719182437AA00000E /* Stream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Stream.h; sourceTree = "<group>"; };
+		AAAA200719182437AA00000F /* USBAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = USBAPI.h; sourceTree = "<group>"; };
+		AAAA200719182437AA000010 /* USBCore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = USBCore.h; sourceTree = "<group>"; };
+		AAAA200719182437AA000011 /* USBDesc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = USBDesc.h; sourceTree = "<group>"; };
+		AAAA200719182437AA000012 /* Udp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Udp.h; sourceTree = "<group>"; };
+		AAAA200719182437AA000013 /* WCharacter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WCharacter.h; sourceTree = "<group>"; };
+		AAAA200719182437AA000014 /* WString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WString.h; sourceTree = "<group>"; };
+		AAAA200719182437AA000015 /* binary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = binary.h; sourceTree = "<group>"; };
+		AAAA200719182437AA000016 /* new.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = new.h; sourceTree = "<group>"; };
+		AAAA200719182437AA000017 /* wiring_private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = wiring_private.h; sourceTree = "<group>"; };
+		AAAA200719182437AA00001B /* EEPROM.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EEPROM.h; sourceTree = "<group>"; };
+		AAAA200719182437AA00001E /* HID.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HID.h; sourceTree = "<group>"; };
+		AAAA200719182437AA000021 /* SPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPI.h; sourceTree = "<group>"; };
+		AAAA200719182437AA000024 /* SoftwareSerial.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SoftwareSerial.h; sourceTree = "<group>"; };
+		AAAA200719182437AA000027 /* Wire.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Wire.h; sourceTree = "<group>"; };
+		AAAA200719182437AA000029 /* twi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = twi.h; sourceTree = "<group>"; };
+		AAAA200719182437AA00002C /* pins_arduino.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pins_arduino.h; sourceTree = "<group>"; };
+		AAAA200719182437AA00002E /* pins_arduino.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pins_arduino.h; sourceTree = "<group>"; };
+		AAAA200719182437AA000030 /* pins_arduino.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pins_arduino.h; sourceTree = "<group>"; };
+		AAAA200719182437AA000032 /* pins_arduino.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pins_arduino.h; sourceTree = "<group>"; };
+		AAAA200719182437AA000034 /* pins_arduino.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pins_arduino.h; sourceTree = "<group>"; };
+		AAAA200719182437AA000036 /* pins_arduino.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pins_arduino.h; sourceTree = "<group>"; };
+		AAAA200719182437AA000038 /* pins_arduino.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pins_arduino.h; sourceTree = "<group>"; };
+		AAAA200719182437AA00003A /* pins_arduino.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pins_arduino.h; sourceTree = "<group>"; };
+		AAAA200719182437AA00003C /* pins_arduino.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pins_arduino.h; sourceTree = "<group>"; };
+		AAAA200719182437AA00003E /* pins_arduino.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pins_arduino.h; sourceTree = "<group>"; };
+		AAAA200719182437AA000040 /* pins_arduino.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pins_arduino.h; sourceTree = "<group>"; };
+		AAAA200719182437AA000044 /* Arduino.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Arduino.h; sourceTree = "<group>"; };
+		AAAA200719182437AA000045 /* Client.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Client.h; sourceTree = "<group>"; };
+		AAAA200719182437AA000046 /* HardwareSerial.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HardwareSerial.h; sourceTree = "<group>"; };
+		AAAA200719182437AA000047 /* IPAddress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IPAddress.h; sourceTree = "<group>"; };
+		AAAA200719182437AA000048 /* Print.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Print.h; sourceTree = "<group>"; };
+		AAAA200719182437AA000049 /* Printable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Printable.h; sourceTree = "<group>"; };
+		AAAA200719182437AA00004A /* Reset.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reset.h; sourceTree = "<group>"; };
+		AAAA200719182437AA00004B /* RingBuffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RingBuffer.h; sourceTree = "<group>"; };
+		AAAA200719182437AA00004C /* Server.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Server.h; sourceTree = "<group>"; };
+		AAAA200719182437AA00004D /* Stream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Stream.h; sourceTree = "<group>"; };
+		AAAA200719182437AA00004E /* Tone.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tone.h; sourceTree = "<group>"; };
+		AAAA200719182437AA00004F /* UARTClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UARTClass.h; sourceTree = "<group>"; };
+		AAAA200719182437AA000050 /* USARTClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = USARTClass.h; sourceTree = "<group>"; };
+		AAAA200719182437AA000052 /* PluggableUSB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PluggableUSB.h; sourceTree = "<group>"; };
+		AAAA200719182437AA000053 /* USBAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = USBAPI.h; sourceTree = "<group>"; };
+		AAAA200719182437AA000054 /* USBCore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = USBCore.h; sourceTree = "<group>"; };
+		AAAA200719182437AA000055 /* USBDesc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = USBDesc.h; sourceTree = "<group>"; };
+		AAAA200719182437AA000056 /* Udp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Udp.h; sourceTree = "<group>"; };
+		AAAA200719182437AA000057 /* WCharacter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WCharacter.h; sourceTree = "<group>"; };
+		AAAA200719182437AA000058 /* WInterrupts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WInterrupts.h; sourceTree = "<group>"; };
+		AAAA200719182437AA000059 /* WMath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMath.h; sourceTree = "<group>"; };
+		AAAA200719182437AA00005A /* WString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WString.h; sourceTree = "<group>"; };
+		AAAA200719182437AA00005C /* dtostrf.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dtostrf.h; sourceTree = "<group>"; };
+		AAAA200719182437AA00005D /* interrupt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = interrupt.h; sourceTree = "<group>"; };
+		AAAA200719182437AA00005E /* pgmspace.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pgmspace.h; sourceTree = "<group>"; };
+		AAAA200719182437AA00005F /* binary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = binary.h; sourceTree = "<group>"; };
+		AAAA200719182437AA000060 /* itoa.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = itoa.h; sourceTree = "<group>"; };
+		AAAA200719182437AA000061 /* syscalls.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = syscalls.h; sourceTree = "<group>"; };
+		AAAA200719182437AA000062 /* watchdog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = watchdog.h; sourceTree = "<group>"; };
+		AAAA200719182437AA000063 /* wiring.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = wiring.h; sourceTree = "<group>"; };
+		AAAA200719182437AA000064 /* wiring_analog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = wiring_analog.h; sourceTree = "<group>"; };
+		AAAA200719182437AA000065 /* wiring_constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = wiring_constants.h; sourceTree = "<group>"; };
+		AAAA200719182437AA000066 /* wiring_digital.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = wiring_digital.h; sourceTree = "<group>"; };
+		AAAA200719182437AA000067 /* wiring_private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = wiring_private.h; sourceTree = "<group>"; };
+		AAAA200719182437AA000068 /* wiring_pulse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = wiring_pulse.h; sourceTree = "<group>"; };
+		AAAA200719182437AA000069 /* wiring_shift.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = wiring_shift.h; sourceTree = "<group>"; };
+		AAAA200719182437AA00006D /* HID.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HID.h; sourceTree = "<group>"; };
+		AAAA200719182437AA000070 /* SPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPI.h; sourceTree = "<group>"; };
+		AAAA200719182437AA000073 /* Wire.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Wire.h; sourceTree = "<group>"; };
+		AAAA200719182437AA00007D /* pins_arduino.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pins_arduino.h; sourceTree = "<group>"; };
+		AAAA200719182437AA00007E /* variant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = variant.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		590867E224C49D2F00D40A21 = {
+			isa = PBXGroup;
+			children = (
+				590867F024C49D2F00D40A21 /* DisplayFearTestUno */,
+				590867EF24C49D2F00D40A21 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		590867EF24C49D2F00D40A21 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				590867EE24C49D2F00D40A21 /* Index */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		590867F024C49D2F00D40A21 /* DisplayFearTestUno */ = {
+			isa = PBXGroup;
+			children = (
+				590867F124C49D2F00D40A21 /* main.cpp */,
+				590867F324C49D2F00D40A21 /* Makefile */,
+				590868DE24C4A3E700D40A21 /* Filter.cpp */,
+				590868DD24C4A3E100D40A21 /* Filter.h */,
+				590868E024C4A55600D40A21 /* LowPassFilter.cpp */,
+				590868E224C4A55C00D40A21 /* LowPassFilter.h */,
+				590868E324C4A56400D40A21 /* HighPassFilter.h */,
+				590868E424C4A56800D40A21 /* HighPassFilter.cpp */,
+				590867F524C49D2F00D40A21 /* ReadMe.txt */,
+				5908684D24C49D2F00D40A21 /* DisplayFearTestUno.ino */,
+				590867F624C49D2F00D40A21 /* Sketchbook */,
+				AAAA200719182437AA000000 /* Resources */,
+				590867F824C49D2F00D40A21 /* Configurations */,
+				5908683124C49D2F00D40A21 /* Makefiles */,
+				5908684724C49D2F00D40A21 /* Utilities */,
+			);
+			path = DisplayFearTestUno;
+			sourceTree = "<group>";
+		};
+		590867F624C49D2F00D40A21 /* Sketchbook */ = {
+			isa = PBXGroup;
+			children = (
+				5908686224C49D4F00D40A21 /* Ucglib */,
+				590867F724C49D2F00D40A21 /* Sketchbook.txt */,
+			);
+			path = Sketchbook;
+			sourceTree = "<group>";
+		};
+		590867F824C49D2F00D40A21 /* Configurations */ = {
+			isa = PBXGroup;
+			children = (
+				590867F924C49D2F00D40A21 /* Arduino Due (Programming Port).xcconfig */,
+				590867FA24C49D2F00D40A21 /* Arduino Duemilanove.xcconfig */,
+				590867FB24C49D2F00D40A21 /* Arduino Leonardo.xcconfig */,
+				590867FC24C49D2F00D40A21 /* Arduino Mega 2560.xcconfig */,
+				590867FD24C49D2F00D40A21 /* Arduino Micro.xcconfig */,
+				590867FE24C49D2F00D40A21 /* Arduino Pro ATmega328-3.3V.xcconfig */,
+				590867FF24C49D2F00D40A21 /* Arduino Pro ATmega328-5V.xcconfig */,
+				5908680024C49D2F00D40A21 /* Arduino Mini ATmega168.xcconfig */,
+				5908680124C49D2F00D40A21 /* Arduino Mini ATmega328.xcconfig */,
+				5908680224C49D2F00D40A21 /* Arduino MKR Zero.xcconfig */,
+				5908680324C49D2F00D40A21 /* Arduino Nano ATmega168.xcconfig */,
+				5908680424C49D2F00D40A21 /* Arduino Nano ATmega328.xcconfig */,
+				5908680524C49D2F00D40A21 /* Arduino Robot Control.xcconfig */,
+				5908680624C49D2F00D40A21 /* Arduino Robot Motor.xcconfig */,
+				5908680724C49D2F00D40A21 /* Arduino Uno.xcconfig */,
+				5908680824C49D2F00D40A21 /* Arduino Yun (USB).xcconfig */,
+				5908680924C49D2F00D40A21 /* Arduino Zero (Programming Port).xcconfig */,
+				5908680A24C49D2F00D40A21 /* Arduino M0 Pro (Programming Port).xcconfig */,
+				5908680B24C49D2F00D40A21 /* Arduino Tian (USB).xcconfig */,
+				5908680C24C49D2F00D40A21 /* nRF BBC micro-bit nRF51.xcconfig */,
+				5908680D24C49D2F00D40A21 /* chipKIT DP32.xcconfig */,
+				5908680E24C49D2F00D40A21 /* chipKIT Max32.xcconfig */,
+				5908680F24C49D2F00D40A21 /* chipKIT uC32.xcconfig */,
+				5908681024C49D2F00D40A21 /* chipKIT Uno32.xcconfig */,
+				5908681124C49D2F00D40A21 /* chipKIT WF32.xcconfig */,
+				5908681224C49D2F00D40A21 /* chipKIT WiFire Rev.AB.xcconfig */,
+				5908681324C49D2F00D40A21 /* chipKIT WiFire Rev.C.xcconfig */,
+				5908681424C49D2F00D40A21 /* ESP8266.xcconfig */,
+				5908681524C49D2F00D40A21 /* NodeMCU 0.9 ESP-12.xcconfig */,
+				5908681624C49D2F00D40A21 /* NodeMCU 1.0 ESP-12E.xcconfig */,
+				5908681724C49D2F00D40A21 /* LaunchPad MSP432P401R EMT.xcconfig */,
+				5908681824C49D2F00D40A21 /* LaunchPad CC3200 WiFi.xcconfig */,
+				5908681924C49D2F00D40A21 /* LaunchPad LM4F120 Stellaris.xcconfig */,
+				5908681A24C49D2F00D40A21 /* LaunchPad TM4C123 Tiva C.xcconfig */,
+				5908681B24C49D2F00D40A21 /* LaunchPad TM4C129 Ethernet.xcconfig */,
+				5908681C24C49D2F00D40A21 /* LaunchPad MSP430G2553.xcconfig */,
+				5908681D24C49D2F00D40A21 /* LaunchPad MSP430G2553-ET.xcconfig */,
+				5908681E24C49D2F00D40A21 /* LaunchPad MSP430G2955.xcconfig */,
+				5908681F24C49D2F00D40A21 /* LaunchPad MSP430FR2355.xcconfig */,
+				5908682024C49D2F00D40A21 /* LaunchPad MSP430FR2433.xcconfig */,
+				5908682124C49D2F00D40A21 /* LaunchPad MSP430FR4133.xcconfig */,
+				5908682224C49D2F00D40A21 /* LaunchPad MSP430F5529.xcconfig */,
+				5908682324C49D2F00D40A21 /* LaunchPad MSP430FR5969.xcconfig */,
+				5908682424C49D2F00D40A21 /* LaunchPad MSP430FR5994.xcconfig */,
+				5908682524C49D2F00D40A21 /* LaunchPad MSP430FR6989.xcconfig */,
+				5908682624C49D2F00D40A21 /* Seeeduino v4.xcconfig */,
+				5908682724C49D2F00D40A21 /* Seeeduino Xiao M0 (USB).xcconfig */,
+				5908682824C49D2F00D40A21 /* Seeeduino Xiao M0 (MSD).xcconfig */,
+				5908682924C49D2F00D40A21 /* Teensy 2.0.xcconfig */,
+				5908682A24C49D2F00D40A21 /* Teensy 3.0.xcconfig */,
+				5908682B24C49D2F00D40A21 /* Teensy 3.1.xcconfig */,
+				5908682C24C49D2F00D40A21 /* Teensy 3.2.xcconfig */,
+				5908682D24C49D2F00D40A21 /* Teensy 3.5.xcconfig */,
+				5908682E24C49D2F00D40A21 /* Teensy 3.6.xcconfig */,
+				5908682F24C49D2F00D40A21 /* Teensy 4.0.xcconfig */,
+				5908683024C49D2F00D40A21 /* Teensy LC.xcconfig */,
+			);
+			path = Configurations;
+			sourceTree = "<group>";
+		};
+		5908683124C49D2F00D40A21 /* Makefiles */ = {
+			isa = PBXGroup;
+			children = (
+				5908683224C49D2F00D40A21 /* ArduinoAVR_180.mk */,
+				5908683324C49D2F00D40A21 /* ArduinoAVR_181.mk */,
+				5908683424C49D2F00D40A21 /* ArduinoSAM_180.mk */,
+				5908683524C49D2F00D40A21 /* ArduinoSAMD_180.mk */,
+				5908683624C49D2F00D40A21 /* nRF51_Boards_180.mk */,
+				5908683724C49D2F00D40A21 /* chipKIT_180.mk */,
+				5908683824C49D2F00D40A21 /* EnergiaMSP430_18.mk */,
+				5908683924C49D2F00D40A21 /* EnergiaMSP430_19.mk */,
+				5908683A24C49D2F00D40A21 /* EnergiaMSP432_R_EMT_18.mk */,
+				5908683B24C49D2F00D40A21 /* EnergiaTIVAC_18.mk */,
+				5908683C24C49D2F00D40A21 /* EnergiaCC3200_18.mk */,
+				5908683D24C49D2F00D40A21 /* ESP8266_180.mk */,
+				5908683E24C49D2F00D40A21 /* SeeeduinoAVR_180.mk */,
+				5908683F24C49D2F00D40A21 /* SeeeduinoSAMD_180.mk */,
+				5908684024C49D2F00D40A21 /* Teensy.mk */,
+				5908684124C49D2F00D40A21 /* Teensy2.mk */,
+				5908684224C49D2F00D40A21 /* Teensy3.mk */,
+				5908684324C49D2F00D40A21 /* About.mk */,
+				5908684424C49D2F00D40A21 /* Step1.mk */,
+				5908684524C49D2F00D40A21 /* Step2.mk */,
+				5908684624C49D2F00D40A21 /* Avrdude.mk */,
+			);
+			path = Makefiles;
+			sourceTree = "<group>";
+		};
+		5908684724C49D2F00D40A21 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				5908684824C49D2F00D40A21 /* reset_1200.py */,
+				5908684A24C49D2F00D40A21 /* embedXcode_check */,
+				5908684B24C49D2F00D40A21 /* embedXcode_chrono */,
+				5908684C24C49D2F00D40A21 /* TemplateIcon.icns */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		5908686224C49D4F00D40A21 /* Ucglib */ = {
+			isa = PBXGroup;
+			children = (
+				5908686324C49D4F00D40A21 /* LICENSE */,
+				5908686424C49D4F00D40A21 /* README.md */,
+				5908686524C49D4F00D40A21 /* examples */,
+				5908687624C49D4F00D40A21 /* library.properties */,
+				5908687724C49D4F00D40A21 /* src */,
+				590868A924C49D4F00D40A21 /* extras */,
+			);
+			name = Ucglib;
+			path = ../../../../Documents/Arduino/libraries/Ucglib;
+			sourceTree = "<group>";
+		};
+		5908686524C49D4F00D40A21 /* examples */ = {
+			isa = PBXGroup;
+			children = (
+				5908686624C49D4F00D40A21 /* HelloWorld */,
+				5908686824C49D4F00D40A21 /* UcgLogo */,
+				5908686A24C49D4F00D40A21 /* Box3D */,
+				5908686C24C49D4F00D40A21 /* Scale */,
+				5908686E24C49D4F00D40A21 /* GraphicsTest */,
+				5908687024C49D4F00D40A21 /* HowToUseFonts */,
+				5908687224C49D4F00D40A21 /* PowerDown */,
+				5908687424C49D4F00D40A21 /* FPS */,
+			);
+			path = examples;
+			sourceTree = "<group>";
+		};
+		5908686624C49D4F00D40A21 /* HelloWorld */ = {
+			isa = PBXGroup;
+			children = (
+				5908686724C49D4F00D40A21 /* HelloWorld.ino */,
+			);
+			path = HelloWorld;
+			sourceTree = "<group>";
+		};
+		5908686824C49D4F00D40A21 /* UcgLogo */ = {
+			isa = PBXGroup;
+			children = (
+				5908686924C49D4F00D40A21 /* UcgLogo.ino */,
+			);
+			path = UcgLogo;
+			sourceTree = "<group>";
+		};
+		5908686A24C49D4F00D40A21 /* Box3D */ = {
+			isa = PBXGroup;
+			children = (
+				5908686B24C49D4F00D40A21 /* Box3D.ino */,
+			);
+			path = Box3D;
+			sourceTree = "<group>";
+		};
+		5908686C24C49D4F00D40A21 /* Scale */ = {
+			isa = PBXGroup;
+			children = (
+				5908686D24C49D4F00D40A21 /* Scale.ino */,
+			);
+			path = Scale;
+			sourceTree = "<group>";
+		};
+		5908686E24C49D4F00D40A21 /* GraphicsTest */ = {
+			isa = PBXGroup;
+			children = (
+				5908686F24C49D4F00D40A21 /* GraphicsTest.ino */,
+			);
+			path = GraphicsTest;
+			sourceTree = "<group>";
+		};
+		5908687024C49D4F00D40A21 /* HowToUseFonts */ = {
+			isa = PBXGroup;
+			children = (
+				5908687124C49D4F00D40A21 /* HowToUseFonts.ino */,
+			);
+			path = HowToUseFonts;
+			sourceTree = "<group>";
+		};
+		5908687224C49D4F00D40A21 /* PowerDown */ = {
+			isa = PBXGroup;
+			children = (
+				5908687324C49D4F00D40A21 /* PowerDown.ino */,
+			);
+			path = PowerDown;
+			sourceTree = "<group>";
+		};
+		5908687424C49D4F00D40A21 /* FPS */ = {
+			isa = PBXGroup;
+			children = (
+				5908687524C49D4F00D40A21 /* FPS.ino */,
+			);
+			path = FPS;
+			sourceTree = "<group>";
+		};
+		5908687724C49D4F00D40A21 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				5908687824C49D4F00D40A21 /* clib */,
+				590868A724C49D4F00D40A21 /* Ucglib.h */,
+				590868A824C49D4F00D40A21 /* Ucglib.cpp */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		5908687824C49D4F00D40A21 /* clib */ = {
+			isa = PBXGroup;
+			children = (
+				5908687924C49D4F00D40A21 /* LucidaConsoleFont.c */,
+				5908687A24C49D4F00D40A21 /* ucg_dev_ic_ld50t6160.c */,
+				5908687B24C49D4F00D40A21 /* ucg_ccs.c */,
+				5908687C24C49D4F00D40A21 /* ucg_dev_tft_128x160_st7735.c */,
+				5908687D24C49D4F00D40A21 /* ucg_dev_ic_ssd1331.c */,
+				5908687E24C49D4F00D40A21 /* ucg_polygon.c */,
+				5908687F24C49D4F00D40A21 /* ucg_font.c */,
+				5908688024C49D4F00D40A21 /* ucg_line.c */,
+				5908688124C49D4F00D40A21 /* ucg_init.c */,
+				5908688224C49D4F00D40A21 /* ucg_dev_tft_132x132_pcf8833.c */,
+				5908688324C49D4F00D40A21 /* ucg_box.c */,
+				5908688424C49D4F00D40A21 /* ucg_dev_ic_ili9486.c */,
+				5908688524C49D4F00D40A21 /* ucg_circle.c */,
+				5908688624C49D4F00D40A21 /* ucg_dev_default_cb.c */,
+				5908688724C49D4F00D40A21 /* ucg_dev_oled_128x128_univision.c */,
+				5908688824C49D4F00D40A21 /* ucg_dev_ic_ili9325.c */,
+				5908688924C49D4F00D40A21 /* ucg_clip.c */,
+				5908688A24C49D4F00D40A21 /* ucg_dev_tft_240x320_ili9325_spi.c */,
+				5908688B24C49D4F00D40A21 /* ucg_dev_ic_hx8352c.c */,
+				5908688C24C49D4F00D40A21 /* ucg_dev_ic_ili9325_spi.c */,
+				5908688D24C49D4F00D40A21 /* ucg_dev_tft_240x320_ssd1289.c */,
+				5908688E24C49D4F00D40A21 /* ucg_dev_tft_128x128_ili9163.c */,
+				5908688F24C49D4F00D40A21 /* ucg_com_msg_api.c */,
+				5908689024C49D4F00D40A21 /* ucg_dev_ic_seps225.c */,
+				5908689124C49D4F00D40A21 /* ucg_pixel.c */,
+				5908689224C49D4F00D40A21 /* ucg_dev_oled_96x64_univision.c */,
+				5908689324C49D4F00D40A21 /* ucg_scale.c */,
+				5908689424C49D4F00D40A21 /* ucg_dev_tft_240x400_hx8352c.c */,
+				5908689524C49D4F00D40A21 /* ucg_dev_ic_ili9341.c */,
+				5908689624C49D4F00D40A21 /* ucg_dev_ic_st7735.c */,
+				5908689724C49D4F00D40A21 /* ucg_vector_font_data.c */,
+				5908689824C49D4F00D40A21 /* ucg_bitmap.c */,
+				5908689924C49D4F00D40A21 /* ucg_dev_oled_160x128_samsung.c */,
+				5908689A24C49D4F00D40A21 /* ucg_dev_oled_128x128_ft.c */,
+				5908689B24C49D4F00D40A21 /* ucg_rotate.c */,
+				5908689C24C49D4F00D40A21 /* ucg_dev_msg_api.c */,
+				5908689D24C49D4F00D40A21 /* ucg_dev_ic_ssd1351.c */,
+				5908689E24C49D4F00D40A21 /* ucg_dev_oled_128x128_ilsoft.c */,
+				5908689F24C49D4F00D40A21 /* ucg_dev_ic_pcf8833.c */,
+				590868A024C49D4F00D40A21 /* ucg_dev_tft_240x320_ili9341.c */,
+				590868A124C49D4F00D40A21 /* ucg_dev_ic_ssd1289.c */,
+				590868A224C49D4F00D40A21 /* ucg_dev_tft_240x320_itdb02.c */,
+				590868A324C49D4F00D40A21 /* ucg_dev_ic_ili9163.c */,
+				590868A424C49D4F00D40A21 /* ucg.h */,
+				590868A524C49D4F00D40A21 /* ucg_pixel_font_data.c */,
+				590868A624C49D4F00D40A21 /* ucg_dev_tft_320x480_ili9486.c */,
+			);
+			path = clib;
+			sourceTree = "<group>";
+		};
+		590868A924C49D4F00D40A21 /* extras */ = {
+			isa = PBXGroup;
+			children = (
+				590868AA24C49D4F00D40A21 /* ChangeLog */,
+				590868AB24C49D4F00D40A21 /* INSTALL.TXT */,
+				590868AC24C49D4F00D40A21 /* displays.pdf */,
+				590868AD24C49D4F00D40A21 /* reference.pdf */,
+				590868AE24C49D4F00D40A21 /* fontsize.pdf */,
+			);
+			path = extras;
+			sourceTree = "<group>";
+		};
+		AAAA200719182437AA000000 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				AAAA200719182437AA000001 /* Arduino */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		AAAA200719182437AA000001 /* Arduino */ = {
+			isa = PBXGroup;
+			children = (
+				AAAA200719182437AA000002 /* avr */,
+				AAAA200719182437AA000041 /* sam */,
+			);
+			path = Arduino;
+			sourceTree = "<group>";
+		};
+		AAAA200719182437AA000002 /* avr */ = {
+			isa = PBXGroup;
+			children = (
+				AAAA200719182437AA000003 /* cores */,
+				AAAA200719182437AA000018 /* libraries */,
+				AAAA200719182437AA00002A /* variants */,
+			);
+			name = avr;
+			path = /Applications/Arduino.app/Contents/Java/hardware/arduino/avr/;
+			sourceTree = SDKROOT;
+		};
+		AAAA200719182437AA000003 /* cores */ = {
+			isa = PBXGroup;
+			children = (
+				AAAA200719182437AA000004 /* arduino */,
+			);
+			path = cores;
+			sourceTree = "<group>";
+		};
+		AAAA200719182437AA000004 /* arduino */ = {
+			isa = PBXGroup;
+			children = (
+				AAAA200719182437AA000005 /* Arduino.h */,
+				AAAA200719182437AA000006 /* Client.h */,
+				AAAA200719182437AA000007 /* HardwareSerial.h */,
+				AAAA200719182437AA000008 /* HardwareSerial_private.h */,
+				AAAA200719182437AA000009 /* IPAddress.h */,
+				AAAA200719182437AA00000A /* PluggableUSB.h */,
+				AAAA200719182437AA00000B /* Print.h */,
+				AAAA200719182437AA00000C /* Printable.h */,
+				AAAA200719182437AA00000D /* Server.h */,
+				AAAA200719182437AA00000E /* Stream.h */,
+				AAAA200719182437AA00000F /* USBAPI.h */,
+				AAAA200719182437AA000010 /* USBCore.h */,
+				AAAA200719182437AA000011 /* USBDesc.h */,
+				AAAA200719182437AA000012 /* Udp.h */,
+				AAAA200719182437AA000013 /* WCharacter.h */,
+				AAAA200719182437AA000014 /* WString.h */,
+				AAAA200719182437AA000015 /* binary.h */,
+				AAAA200719182437AA000016 /* new.h */,
+				AAAA200719182437AA000017 /* wiring_private.h */,
+			);
+			path = arduino;
+			sourceTree = "<group>";
+		};
+		AAAA200719182437AA000018 /* libraries */ = {
+			isa = PBXGroup;
+			children = (
+				AAAA200719182437AA000019 /* EEPROM */,
+				AAAA200719182437AA00001C /* HID */,
+				AAAA200719182437AA00001F /* SPI */,
+				AAAA200719182437AA000022 /* SoftwareSerial */,
+				AAAA200719182437AA000025 /* Wire */,
+			);
+			path = libraries;
+			sourceTree = "<group>";
+		};
+		AAAA200719182437AA000019 /* EEPROM */ = {
+			isa = PBXGroup;
+			children = (
+				AAAA200719182437AA00001A /* src */,
+			);
+			path = EEPROM;
+			sourceTree = "<group>";
+		};
+		AAAA200719182437AA00001A /* src */ = {
+			isa = PBXGroup;
+			children = (
+				AAAA200719182437AA00001B /* EEPROM.h */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		AAAA200719182437AA00001C /* HID */ = {
+			isa = PBXGroup;
+			children = (
+				AAAA200719182437AA00001D /* src */,
+			);
+			path = HID;
+			sourceTree = "<group>";
+		};
+		AAAA200719182437AA00001D /* src */ = {
+			isa = PBXGroup;
+			children = (
+				AAAA200719182437AA00001E /* HID.h */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		AAAA200719182437AA00001F /* SPI */ = {
+			isa = PBXGroup;
+			children = (
+				AAAA200719182437AA000020 /* src */,
+			);
+			path = SPI;
+			sourceTree = "<group>";
+		};
+		AAAA200719182437AA000020 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				AAAA200719182437AA000021 /* SPI.h */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		AAAA200719182437AA000022 /* SoftwareSerial */ = {
+			isa = PBXGroup;
+			children = (
+				AAAA200719182437AA000023 /* src */,
+			);
+			path = SoftwareSerial;
+			sourceTree = "<group>";
+		};
+		AAAA200719182437AA000023 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				AAAA200719182437AA000024 /* SoftwareSerial.h */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		AAAA200719182437AA000025 /* Wire */ = {
+			isa = PBXGroup;
+			children = (
+				AAAA200719182437AA000026 /* src */,
+			);
+			path = Wire;
+			sourceTree = "<group>";
+		};
+		AAAA200719182437AA000026 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				AAAA200719182437AA000027 /* Wire.h */,
+				AAAA200719182437AA000028 /* utility */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		AAAA200719182437AA000028 /* utility */ = {
+			isa = PBXGroup;
+			children = (
+				AAAA200719182437AA000029 /* twi.h */,
+			);
+			path = utility;
+			sourceTree = "<group>";
+		};
+		AAAA200719182437AA00002A /* variants */ = {
+			isa = PBXGroup;
+			children = (
+				AAAA200719182437AA00002B /* circuitplay32u4 */,
+				AAAA200719182437AA00002D /* eightanaloginputs */,
+				AAAA200719182437AA00002F /* ethernet */,
+				AAAA200719182437AA000031 /* gemma */,
+				AAAA200719182437AA000033 /* leonardo */,
+				AAAA200719182437AA000035 /* mega */,
+				AAAA200719182437AA000037 /* micro */,
+				AAAA200719182437AA000039 /* robot_control */,
+				AAAA200719182437AA00003B /* robot_motor */,
+				AAAA200719182437AA00003D /* standard */,
+				AAAA200719182437AA00003F /* yun */,
+			);
+			path = variants;
+			sourceTree = "<group>";
+		};
+		AAAA200719182437AA00002B /* circuitplay32u4 */ = {
+			isa = PBXGroup;
+			children = (
+				AAAA200719182437AA00002C /* pins_arduino.h */,
+			);
+			path = circuitplay32u4;
+			sourceTree = "<group>";
+		};
+		AAAA200719182437AA00002D /* eightanaloginputs */ = {
+			isa = PBXGroup;
+			children = (
+				AAAA200719182437AA00002E /* pins_arduino.h */,
+			);
+			path = eightanaloginputs;
+			sourceTree = "<group>";
+		};
+		AAAA200719182437AA00002F /* ethernet */ = {
+			isa = PBXGroup;
+			children = (
+				AAAA200719182437AA000030 /* pins_arduino.h */,
+			);
+			path = ethernet;
+			sourceTree = "<group>";
+		};
+		AAAA200719182437AA000031 /* gemma */ = {
+			isa = PBXGroup;
+			children = (
+				AAAA200719182437AA000032 /* pins_arduino.h */,
+			);
+			path = gemma;
+			sourceTree = "<group>";
+		};
+		AAAA200719182437AA000033 /* leonardo */ = {
+			isa = PBXGroup;
+			children = (
+				AAAA200719182437AA000034 /* pins_arduino.h */,
+			);
+			path = leonardo;
+			sourceTree = "<group>";
+		};
+		AAAA200719182437AA000035 /* mega */ = {
+			isa = PBXGroup;
+			children = (
+				AAAA200719182437AA000036 /* pins_arduino.h */,
+			);
+			path = mega;
+			sourceTree = "<group>";
+		};
+		AAAA200719182437AA000037 /* micro */ = {
+			isa = PBXGroup;
+			children = (
+				AAAA200719182437AA000038 /* pins_arduino.h */,
+			);
+			path = micro;
+			sourceTree = "<group>";
+		};
+		AAAA200719182437AA000039 /* robot_control */ = {
+			isa = PBXGroup;
+			children = (
+				AAAA200719182437AA00003A /* pins_arduino.h */,
+			);
+			path = robot_control;
+			sourceTree = "<group>";
+		};
+		AAAA200719182437AA00003B /* robot_motor */ = {
+			isa = PBXGroup;
+			children = (
+				AAAA200719182437AA00003C /* pins_arduino.h */,
+			);
+			path = robot_motor;
+			sourceTree = "<group>";
+		};
+		AAAA200719182437AA00003D /* standard */ = {
+			isa = PBXGroup;
+			children = (
+				AAAA200719182437AA00003E /* pins_arduino.h */,
+			);
+			path = standard;
+			sourceTree = "<group>";
+		};
+		AAAA200719182437AA00003F /* yun */ = {
+			isa = PBXGroup;
+			children = (
+				AAAA200719182437AA000040 /* pins_arduino.h */,
+			);
+			path = yun;
+			sourceTree = "<group>";
+		};
+		AAAA200719182437AA000041 /* sam */ = {
+			isa = PBXGroup;
+			children = (
+				AAAA200719182437AA000042 /* cores */,
+				AAAA200719182437AA00006A /* libraries */,
+				AAAA200719182437AA000074 /* variants */,
+			);
+			name = sam;
+			path = /Users/omershamai/Library/Arduino15/packages/arduino/hardware/sam/1.6.12;
+			sourceTree = SDKROOT;
+		};
+		AAAA200719182437AA000042 /* cores */ = {
+			isa = PBXGroup;
+			children = (
+				AAAA200719182437AA000043 /* arduino */,
+			);
+			path = cores;
+			sourceTree = "<group>";
+		};
+		AAAA200719182437AA000043 /* arduino */ = {
+			isa = PBXGroup;
+			children = (
+				AAAA200719182437AA000044 /* Arduino.h */,
+				AAAA200719182437AA000045 /* Client.h */,
+				AAAA200719182437AA000046 /* HardwareSerial.h */,
+				AAAA200719182437AA000047 /* IPAddress.h */,
+				AAAA200719182437AA000048 /* Print.h */,
+				AAAA200719182437AA000049 /* Printable.h */,
+				AAAA200719182437AA00004A /* Reset.h */,
+				AAAA200719182437AA00004B /* RingBuffer.h */,
+				AAAA200719182437AA00004C /* Server.h */,
+				AAAA200719182437AA00004D /* Stream.h */,
+				AAAA200719182437AA00004E /* Tone.h */,
+				AAAA200719182437AA00004F /* UARTClass.h */,
+				AAAA200719182437AA000050 /* USARTClass.h */,
+				AAAA200719182437AA000051 /* USB */,
+				AAAA200719182437AA000056 /* Udp.h */,
+				AAAA200719182437AA000057 /* WCharacter.h */,
+				AAAA200719182437AA000058 /* WInterrupts.h */,
+				AAAA200719182437AA000059 /* WMath.h */,
+				AAAA200719182437AA00005A /* WString.h */,
+				AAAA200719182437AA00005B /* avr */,
+				AAAA200719182437AA00005F /* binary.h */,
+				AAAA200719182437AA000060 /* itoa.h */,
+				AAAA200719182437AA000061 /* syscalls.h */,
+				AAAA200719182437AA000062 /* watchdog.h */,
+				AAAA200719182437AA000063 /* wiring.h */,
+				AAAA200719182437AA000064 /* wiring_analog.h */,
+				AAAA200719182437AA000065 /* wiring_constants.h */,
+				AAAA200719182437AA000066 /* wiring_digital.h */,
+				AAAA200719182437AA000067 /* wiring_private.h */,
+				AAAA200719182437AA000068 /* wiring_pulse.h */,
+				AAAA200719182437AA000069 /* wiring_shift.h */,
+			);
+			path = arduino;
+			sourceTree = "<group>";
+		};
+		AAAA200719182437AA000051 /* USB */ = {
+			isa = PBXGroup;
+			children = (
+				AAAA200719182437AA000052 /* PluggableUSB.h */,
+				AAAA200719182437AA000053 /* USBAPI.h */,
+				AAAA200719182437AA000054 /* USBCore.h */,
+				AAAA200719182437AA000055 /* USBDesc.h */,
+			);
+			path = USB;
+			sourceTree = "<group>";
+		};
+		AAAA200719182437AA00005B /* avr */ = {
+			isa = PBXGroup;
+			children = (
+				AAAA200719182437AA00005C /* dtostrf.h */,
+				AAAA200719182437AA00005D /* interrupt.h */,
+				AAAA200719182437AA00005E /* pgmspace.h */,
+			);
+			path = avr;
+			sourceTree = "<group>";
+		};
+		AAAA200719182437AA00006A /* libraries */ = {
+			isa = PBXGroup;
+			children = (
+				AAAA200719182437AA00006B /* HID */,
+				AAAA200719182437AA00006E /* SPI */,
+				AAAA200719182437AA000071 /* Wire */,
+			);
+			path = libraries;
+			sourceTree = "<group>";
+		};
+		AAAA200719182437AA00006B /* HID */ = {
+			isa = PBXGroup;
+			children = (
+				AAAA200719182437AA00006C /* src */,
+			);
+			path = HID;
+			sourceTree = "<group>";
+		};
+		AAAA200719182437AA00006C /* src */ = {
+			isa = PBXGroup;
+			children = (
+				AAAA200719182437AA00006D /* HID.h */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		AAAA200719182437AA00006E /* SPI */ = {
+			isa = PBXGroup;
+			children = (
+				AAAA200719182437AA00006F /* src */,
+			);
+			path = SPI;
+			sourceTree = "<group>";
+		};
+		AAAA200719182437AA00006F /* src */ = {
+			isa = PBXGroup;
+			children = (
+				AAAA200719182437AA000070 /* SPI.h */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		AAAA200719182437AA000071 /* Wire */ = {
+			isa = PBXGroup;
+			children = (
+				AAAA200719182437AA000072 /* src */,
+			);
+			path = Wire;
+			sourceTree = "<group>";
+		};
+		AAAA200719182437AA000072 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				AAAA200719182437AA000073 /* Wire.h */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		AAAA200719182437AA000074 /* variants */ = {
+			isa = PBXGroup;
+			children = (
+				AAAA200719182437AA000075 /* arduino_due_x */,
+			);
+			path = variants;
+			sourceTree = "<group>";
+		};
+		AAAA200719182437AA000075 /* arduino_due_x */ = {
+			isa = PBXGroup;
+			children = (
+				AAAA200719182437AA00007D /* pins_arduino.h */,
+				AAAA200719182437AA00007E /* variant.h */,
+			);
+			path = arduino_due_x;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXLegacyTarget section */
+		590867E724C49D2F00D40A21 /* Build */ = {
+			isa = PBXLegacyTarget;
+			buildArgumentsString = build;
+			buildConfigurationList = 5908685024C49D2F00D40A21 /* Build configuration list for PBXLegacyTarget "Build" */;
+			buildPhases = (
+			);
+			buildToolPath = make;
+			buildWorkingDirectory = "$(PROJECT)";
+			dependencies = (
+			);
+			name = Build;
+			passBuildSettingsInEnvironment = 1;
+			productName = Build;
+		};
+		590867E824C49D2F00D40A21 /* All */ = {
+			isa = PBXLegacyTarget;
+			buildArgumentsString = all;
+			buildConfigurationList = 5908685324C49D2F00D40A21 /* Build configuration list for PBXLegacyTarget "All" */;
+			buildPhases = (
+			);
+			buildToolPath = make;
+			buildWorkingDirectory = "$(PROJECT)";
+			dependencies = (
+			);
+			name = All;
+			passBuildSettingsInEnvironment = 1;
+			productName = All;
+		};
+		590867E924C49D2F00D40A21 /* Boards */ = {
+			isa = PBXLegacyTarget;
+			buildArgumentsString = boards;
+			buildConfigurationList = 5908685624C49D2F00D40A21 /* Build configuration list for PBXLegacyTarget "Boards" */;
+			buildPhases = (
+			);
+			buildToolPath = make;
+			buildWorkingDirectory = "$(PROJECT)";
+			dependencies = (
+			);
+			name = Boards;
+			passBuildSettingsInEnvironment = 1;
+			productName = Boards;
+		};
+		590867EA24C49D2F00D40A21 /* Serial */ = {
+			isa = PBXLegacyTarget;
+			buildArgumentsString = serial;
+			buildConfigurationList = 5908685924C49D2F00D40A21 /* Build configuration list for PBXLegacyTarget "Serial" */;
+			buildPhases = (
+			);
+			buildToolPath = make;
+			buildWorkingDirectory = "$(PROJECT)";
+			dependencies = (
+			);
+			name = Serial;
+			passBuildSettingsInEnvironment = 1;
+			productName = Serial;
+		};
+		590867EB24C49D2F00D40A21 /* Upload */ = {
+			isa = PBXLegacyTarget;
+			buildArgumentsString = upload;
+			buildConfigurationList = 5908685C24C49D2F00D40A21 /* Build configuration list for PBXLegacyTarget "Upload" */;
+			buildPhases = (
+			);
+			buildToolPath = make;
+			buildWorkingDirectory = "$(PROJECT)";
+			dependencies = (
+			);
+			name = Upload;
+			passBuildSettingsInEnvironment = 1;
+			productName = Upload;
+		};
+/* End PBXLegacyTarget section */
+
+/* Begin PBXNativeTarget section */
+		590867ED24C49D2F00D40A21 /* Index */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5908685F24C49D2F00D40A21 /* Build configuration list for PBXNativeTarget "Index" */;
+			buildPhases = (
+				590867EC24C49D2F00D40A21 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Index;
+			productName = Index;
+			productReference = 590867EE24C49D2F00D40A21 /* Index */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		590867E324C49D2F00D40A21 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1200;
+				TargetAttributes = {
+					590867E724C49D2F00D40A21 = {
+						CreatedOnToolsVersion = 12.0;
+					};
+					590867E824C49D2F00D40A21 = {
+						CreatedOnToolsVersion = 12.0;
+					};
+					590867E924C49D2F00D40A21 = {
+						CreatedOnToolsVersion = 12.0;
+					};
+					590867EA24C49D2F00D40A21 = {
+						CreatedOnToolsVersion = 12.0;
+					};
+					590867EB24C49D2F00D40A21 = {
+						CreatedOnToolsVersion = 12.0;
+					};
+					590867ED24C49D2F00D40A21 = {
+						CreatedOnToolsVersion = 12.0;
+					};
+				};
+			};
+			buildConfigurationList = 590867E624C49D2F00D40A21 /* Build configuration list for PBXProject "DisplayFearTestUno" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 590867E224C49D2F00D40A21;
+			productRefGroup = 590867EF24C49D2F00D40A21 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				590867E724C49D2F00D40A21 /* Build */,
+				590867E824C49D2F00D40A21 /* All */,
+				590867E924C49D2F00D40A21 /* Boards */,
+				590867EA24C49D2F00D40A21 /* Serial */,
+				590867EB24C49D2F00D40A21 /* Upload */,
+				590867ED24C49D2F00D40A21 /* Index */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		590867EC24C49D2F00D40A21 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				590868E524C4A56800D40A21 /* HighPassFilter.cpp in Sources */,
+				590867F224C49D2F00D40A21 /* main.cpp in Sources */,
+				5928684D24C49D2F00D40A21 /* DisplayFearTestUno.ino in Sources */,
+				AA2A200719182437AA000005 /* Arduino.h in Sources */,
+				AA2A200719182437AA000006 /* Client.h in Sources */,
+				AA2A200719182437AA000007 /* HardwareSerial.h in Sources */,
+				590868B724C49D4F00D40A21 /* ucg_init.c in Sources */,
+				AA2A200719182437AA000008 /* HardwareSerial_private.h in Sources */,
+				AA2A200719182437AA000009 /* IPAddress.h in Sources */,
+				AA2A200719182437AA00000A /* PluggableUSB.h in Sources */,
+				AA2A200719182437AA00000B /* Print.h in Sources */,
+				590868B024C49D4F00D40A21 /* ucg_dev_ic_ld50t6160.c in Sources */,
+				AA2A200719182437AA00000C /* Printable.h in Sources */,
+				590868B124C49D4F00D40A21 /* ucg_ccs.c in Sources */,
+				AA2A200719182437AA00000D /* Server.h in Sources */,
+				AA2A200719182437AA00000E /* Stream.h in Sources */,
+				AA2A200719182437AA00000F /* USBAPI.h in Sources */,
+				AA2A200719182437AA000010 /* USBCore.h in Sources */,
+				AA2A200719182437AA000011 /* USBDesc.h in Sources */,
+				590868D124C49D4F00D40A21 /* ucg_rotate.c in Sources */,
+				590868B224C49D4F00D40A21 /* ucg_dev_tft_128x160_st7735.c in Sources */,
+				AA2A200719182437AA000012 /* Udp.h in Sources */,
+				AA2A200719182437AA000013 /* WCharacter.h in Sources */,
+				AA2A200719182437AA000014 /* WString.h in Sources */,
+				AA2A200719182437AA000015 /* binary.h in Sources */,
+				AA2A200719182437AA000016 /* new.h in Sources */,
+				AA2A200719182437AA000017 /* wiring_private.h in Sources */,
+				590868CE24C49D4F00D40A21 /* ucg_bitmap.c in Sources */,
+				590868BB24C49D4F00D40A21 /* ucg_circle.c in Sources */,
+				AA2A200719182437AA00001B /* EEPROM.h in Sources */,
+				AA2A200719182437AA00001E /* HID.h in Sources */,
+				AA2A200719182437AA000021 /* SPI.h in Sources */,
+				590868DF24C4A3E700D40A21 /* Filter.cpp in Sources */,
+				AA2A200719182437AA000024 /* SoftwareSerial.h in Sources */,
+				590868C824C49D4F00D40A21 /* ucg_dev_oled_96x64_univision.c in Sources */,
+				AA2A200719182437AA000027 /* Wire.h in Sources */,
+				AA2A200719182437AA000029 /* twi.h in Sources */,
+				AA2A200719182437AA00002C /* pins_arduino.h in Sources */,
+				AA2A200719182437AA00002E /* pins_arduino.h in Sources */,
+				AA2A200719182437AA000030 /* pins_arduino.h in Sources */,
+				AA2A200719182437AA000032 /* pins_arduino.h in Sources */,
+				AA2A200719182437AA000034 /* pins_arduino.h in Sources */,
+				590868AF24C49D4F00D40A21 /* LucidaConsoleFont.c in Sources */,
+				AA2A200719182437AA000036 /* pins_arduino.h in Sources */,
+				590868BA24C49D4F00D40A21 /* ucg_dev_ic_ili9486.c in Sources */,
+				AA2A200719182437AA000038 /* pins_arduino.h in Sources */,
+				AA2A200719182437AA00003A /* pins_arduino.h in Sources */,
+				AA2A200719182437AA00003C /* pins_arduino.h in Sources */,
+				AA2A200719182437AA00003E /* pins_arduino.h in Sources */,
+				590868C724C49D4F00D40A21 /* ucg_pixel.c in Sources */,
+				AA2A200719182437AA000040 /* pins_arduino.h in Sources */,
+				590868DA24C49D4F00D40A21 /* ucg_pixel_font_data.c in Sources */,
+				590868E124C4A55600D40A21 /* LowPassFilter.cpp in Sources */,
+				AA2A200719182437AA000044 /* Arduino.h in Sources */,
+				AA2A200719182437AA000045 /* Client.h in Sources */,
+				AA2A200719182437AA000046 /* HardwareSerial.h in Sources */,
+				590868BC24C49D4F00D40A21 /* ucg_dev_default_cb.c in Sources */,
+				590868CB24C49D4F00D40A21 /* ucg_dev_ic_ili9341.c in Sources */,
+				AA2A200719182437AA000047 /* IPAddress.h in Sources */,
+				AA2A200719182437AA000048 /* Print.h in Sources */,
+				590868B424C49D4F00D40A21 /* ucg_polygon.c in Sources */,
+				590868CC24C49D4F00D40A21 /* ucg_dev_ic_st7735.c in Sources */,
+				AA2A200719182437AA000049 /* Printable.h in Sources */,
+				AA2A200719182437AA00004A /* Reset.h in Sources */,
+				590868D624C49D4F00D40A21 /* ucg_dev_tft_240x320_ili9341.c in Sources */,
+				AA2A200719182437AA00004B /* RingBuffer.h in Sources */,
+				590868C424C49D4F00D40A21 /* ucg_dev_tft_128x128_ili9163.c in Sources */,
+				AA2A200719182437AA00004C /* Server.h in Sources */,
+				AA2A200719182437AA00004D /* Stream.h in Sources */,
+				590868C924C49D4F00D40A21 /* ucg_scale.c in Sources */,
+				AA2A200719182437AA00004E /* Tone.h in Sources */,
+				590868C224C49D4F00D40A21 /* ucg_dev_ic_ili9325_spi.c in Sources */,
+				AA2A200719182437AA00004F /* UARTClass.h in Sources */,
+				590868DC24C49D4F00D40A21 /* Ucglib.cpp in Sources */,
+				590868B324C49D4F00D40A21 /* ucg_dev_ic_ssd1331.c in Sources */,
+				AA2A200719182437AA000050 /* USARTClass.h in Sources */,
+				AA2A200719182437AA000052 /* PluggableUSB.h in Sources */,
+				AA2A200719182437AA000053 /* USBAPI.h in Sources */,
+				AA2A200719182437AA000054 /* USBCore.h in Sources */,
+				AA2A200719182437AA000055 /* USBDesc.h in Sources */,
+				590868BF24C49D4F00D40A21 /* ucg_clip.c in Sources */,
+				AA2A200719182437AA000056 /* Udp.h in Sources */,
+				590868C624C49D4F00D40A21 /* ucg_dev_ic_seps225.c in Sources */,
+				AA2A200719182437AA000057 /* WCharacter.h in Sources */,
+				AA2A200719182437AA000058 /* WInterrupts.h in Sources */,
+				590868B824C49D4F00D40A21 /* ucg_dev_tft_132x132_pcf8833.c in Sources */,
+				590868B524C49D4F00D40A21 /* ucg_font.c in Sources */,
+				590868BE24C49D4F00D40A21 /* ucg_dev_ic_ili9325.c in Sources */,
+				AA2A200719182437AA000059 /* WMath.h in Sources */,
+				AA2A200719182437AA00005A /* WString.h in Sources */,
+				590868D324C49D4F00D40A21 /* ucg_dev_ic_ssd1351.c in Sources */,
+				AA2A200719182437AA00005C /* dtostrf.h in Sources */,
+				AA2A200719182437AA00005D /* interrupt.h in Sources */,
+				AA2A200719182437AA00005E /* pgmspace.h in Sources */,
+				590868D024C49D4F00D40A21 /* ucg_dev_oled_128x128_ft.c in Sources */,
+				AA2A200719182437AA00005F /* binary.h in Sources */,
+				AA2A200719182437AA000060 /* itoa.h in Sources */,
+				590868C024C49D4F00D40A21 /* ucg_dev_tft_240x320_ili9325_spi.c in Sources */,
+				AA2A200719182437AA000061 /* syscalls.h in Sources */,
+				AA2A200719182437AA000062 /* watchdog.h in Sources */,
+				AA2A200719182437AA000063 /* wiring.h in Sources */,
+				AA2A200719182437AA000064 /* wiring_analog.h in Sources */,
+				AA2A200719182437AA000065 /* wiring_constants.h in Sources */,
+				AA2A200719182437AA000066 /* wiring_digital.h in Sources */,
+				AA2A200719182437AA000067 /* wiring_private.h in Sources */,
+				590868D824C49D4F00D40A21 /* ucg_dev_tft_240x320_itdb02.c in Sources */,
+				590868D224C49D4F00D40A21 /* ucg_dev_msg_api.c in Sources */,
+				AA2A200719182437AA000068 /* wiring_pulse.h in Sources */,
+				AA2A200719182437AA000069 /* wiring_shift.h in Sources */,
+				590868BD24C49D4F00D40A21 /* ucg_dev_oled_128x128_univision.c in Sources */,
+				590868C324C49D4F00D40A21 /* ucg_dev_tft_240x320_ssd1289.c in Sources */,
+				AA2A200719182437AA00006D /* HID.h in Sources */,
+				590868DB24C49D4F00D40A21 /* ucg_dev_tft_320x480_ili9486.c in Sources */,
+				590868CF24C49D4F00D40A21 /* ucg_dev_oled_160x128_samsung.c in Sources */,
+				590868D424C49D4F00D40A21 /* ucg_dev_oled_128x128_ilsoft.c in Sources */,
+				590868C524C49D4F00D40A21 /* ucg_com_msg_api.c in Sources */,
+				AA2A200719182437AA000070 /* SPI.h in Sources */,
+				590868D524C49D4F00D40A21 /* ucg_dev_ic_pcf8833.c in Sources */,
+				AA2A200719182437AA000073 /* Wire.h in Sources */,
+				590868C124C49D4F00D40A21 /* ucg_dev_ic_hx8352c.c in Sources */,
+				590868B624C49D4F00D40A21 /* ucg_line.c in Sources */,
+				590868D724C49D4F00D40A21 /* ucg_dev_ic_ssd1289.c in Sources */,
+				590868CD24C49D4F00D40A21 /* ucg_vector_font_data.c in Sources */,
+				590868D924C49D4F00D40A21 /* ucg_dev_ic_ili9163.c in Sources */,
+				590868B924C49D4F00D40A21 /* ucg_box.c in Sources */,
+				AA2A200719182437AA00007D /* pins_arduino.h in Sources */,
+				590868CA24C49D4F00D40A21 /* ucg_dev_tft_240x400_hx8352c.c in Sources */,
+				AA2A200719182437AA00007E /* variant.h in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		5908684E24C49D2F00D40A21 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5908680724C49D2F00D40A21 /* Arduino Uno.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PATH = "$(PATH):$(PROJECT_DIR)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKETCHBOOK_DIR = "";
+				UPDATE_POLICY = 0;
+			};
+			name = Debug;
+		};
+		5908684F24C49D2F00D40A21 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PATH = "$(PATH):$(PROJECT_DIR)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKETCHBOOK_DIR = "";
+				UPDATE_POLICY = 0;
+			};
+			name = Release;
+		};
+		5908685124C49D2F00D40A21 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 666F768P5J;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		5908685224C49D2F00D40A21 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 666F768P5J;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		5908685424C49D2F00D40A21 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 666F768P5J;
+			};
+			name = Debug;
+		};
+		5908685524C49D2F00D40A21 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 666F768P5J;
+			};
+			name = Release;
+		};
+		5908685724C49D2F00D40A21 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 666F768P5J;
+			};
+			name = Debug;
+		};
+		5908685824C49D2F00D40A21 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 666F768P5J;
+			};
+			name = Release;
+		};
+		5908685A24C49D2F00D40A21 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 666F768P5J;
+			};
+			name = Debug;
+		};
+		5908685B24C49D2F00D40A21 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 666F768P5J;
+			};
+			name = Release;
+		};
+		5908685D24C49D2F00D40A21 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 666F768P5J;
+			};
+			name = Debug;
+		};
+		5908685E24C49D2F00D40A21 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 666F768P5J;
+			};
+			name = Release;
+		};
+		5908686024C49D2F00D40A21 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 666F768P5J;
+				ENABLE_HARDENED_RUNTIME = YES;
+			};
+			name = Debug;
+		};
+		5908686124C49D2F00D40A21 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 666F768P5J;
+				ENABLE_HARDENED_RUNTIME = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		590867E624C49D2F00D40A21 /* Build configuration list for PBXProject "DisplayFearTestUno" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5908684E24C49D2F00D40A21 /* Debug */,
+				5908684F24C49D2F00D40A21 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5908685024C49D2F00D40A21 /* Build configuration list for PBXLegacyTarget "Build" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5908685124C49D2F00D40A21 /* Debug */,
+				5908685224C49D2F00D40A21 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5908685324C49D2F00D40A21 /* Build configuration list for PBXLegacyTarget "All" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5908685424C49D2F00D40A21 /* Debug */,
+				5908685524C49D2F00D40A21 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5908685624C49D2F00D40A21 /* Build configuration list for PBXLegacyTarget "Boards" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5908685724C49D2F00D40A21 /* Debug */,
+				5908685824C49D2F00D40A21 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5908685924C49D2F00D40A21 /* Build configuration list for PBXLegacyTarget "Serial" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5908685A24C49D2F00D40A21 /* Debug */,
+				5908685B24C49D2F00D40A21 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5908685C24C49D2F00D40A21 /* Build configuration list for PBXLegacyTarget "Upload" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5908685D24C49D2F00D40A21 /* Debug */,
+				5908685E24C49D2F00D40A21 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5908685F24C49D2F00D40A21 /* Build configuration list for PBXNativeTarget "Index" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5908686024C49D2F00D40A21 /* Debug */,
+				5908686124C49D2F00D40A21 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 590867E324C49D2F00D40A21 /* Project object */;
+}
