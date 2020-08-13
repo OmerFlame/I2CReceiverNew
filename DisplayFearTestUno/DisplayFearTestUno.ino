@@ -4,14 +4,14 @@
 // Description of the project
 // Developed with [embedXcode](https://embedXcode.weebly.com)
 //
-// Author 		Omer Shamai
-// 				___ORGANIZATIONNAME___
+// Author         Omer Shamai
+//                 ___ORGANIZATIONNAME___
 //
-// Date			19/07/2020 18:24
-// Version		<#version#>
+// Date            19/07/2020 18:24
+// Version        <#version#>
 //
-// Copyright	© Omer Shamai, 2020
-// Licence		<#licence#>
+// Copyright    © Omer Shamai, 2020
+// Licence        <#licence#>
 //
 // See         ReadMe.txt for references
 //
@@ -37,6 +37,7 @@
 // Include application, user and local libraries
 // !!! Help http://bit.ly/2CL22Qp
 #include <Ucglib.h>
+#include "Menu.h"
 #include <Wire.h>
 #include "Filter.h"
 #include "LowPassFilter.h"
@@ -57,8 +58,8 @@
 #define AD_MISO                        36
 #define AD_SCK                          5
 
-#define MENU_BTN                        9
-#define SET_BTN                         8
+#define MENU_BTN                        5
+#define SET_BTN                         4
 
 #define SW_LO_PK                        3
 #define SW_MID2_PK                     22
@@ -77,6 +78,9 @@
 #define HIGH_FILTER_CAP      0.0000000039
 #define LOW_PASS_CAP        0.00000000033
 #define HIGH_PASS_CAP        0.0000000012
+
+byte commandByte = 0x00;
+byte dataByte = 0x00;
 
 int setCounter = 0;
 int setState = 0;
@@ -117,6 +121,7 @@ Filter filters[] = { filter1, filter2, filter3, filter4 };
 
 LowPassFilter lpf(ucg, long(96.46), 14615, LOW_PASS_CAP, 0, 133, 219, 84, 97);
 HighPassFilter hpf(ucg, long(26.526), long(2368.4), HIGH_PASS_CAP, 0, 149, 61, 84, 103);
+MenuController menu(ucg, &isShowingMenu, &commandByte, &dataByte, &shouldUseMemory, &filters, &lpf, &hpf);
 
 // Prototypes
 // !!! Help: http://bit.ly/2TAbgoI
@@ -169,18 +174,28 @@ void initAllFilters() {
 
 
 void receiveEvent(int howMany) {
+    
+    if (isShowingMenu == false && digitalRead(MENU_BTN) == LOW) {
+        //Wire.beginTransmission(1);
+        //Wire.write(0x01);
+        //Wire.endTransmission();
+        commandByte = 0x01;
+        dataByte = 0x01;
+        
+        menu.shouldShowController = true;
+        return;
+        //menu.show();
+    }
+    if (isShowingMenu == true && digitalRead(MENU_BTN) == HIGH) {
+        return;
+    }
+    
     //Serial.println("RECEIVED");
     char buffer[howMany];
     int currentCell = 0;
     
     for (int i = 0; i < 39; i++) {
         buffer[i] = 0x00;
-    }
-    
-    char extractedKeyword[40];
-    
-    for (int i = 0; i < 39; i++) {
-        extractedKeyword[i] = 0x00;
     }
     
     char extractedKeywords[2][40];
@@ -285,9 +300,18 @@ void receiveEvent(int howMany) {
         ucg.setPrintPos(filters[3].dbX(), filters[3].dbY());
         ucg.setColor(255, 0, 196);
         
-        for (int i = 1; i < sizeof(buffer); i++) {
+        /*for (int i = 1; i < 6; i++) {
             ucg.print(buffer[i]);
-        }
+        }*/
+
+        ucg.print(buffer[1]);
+        ucg.print(buffer[2]);
+        ucg.print(buffer[3]);
+        ucg.print(buffer[4]);
+
+        //Serial.print(buffer[2]);
+        //Serial.println();
+        //Serial.println();
     } else if (algoKey == 0x32) {
         //filters[3].setTextQ(extractedKeywords[1]);
         ucg.setPrintPos(filters[3].qX(), filters[3].qY());
@@ -311,7 +335,23 @@ void receiveEvent(int howMany) {
         for (int i = 1; i < sizeof(buffer); i++) {
             ucg.print(buffer[i]);
         }
+    } else if (algoKey == 0x90) {
+        ucg.setPrintPos(90, 149);
+        ucg.setColor(0, 255, 0, 0);
+        ucg.print("MEM");
+    } else if (algoKey == 0x80) {
+        ucg.setPrintPos(90, 149);
+        ucg.setColor(0, 255, 0, 0);
+        ucg.print("   ");
     }
+}
+
+void requestEvent() {
+    Wire.write(commandByte);
+    Wire.write(dataByte);
+
+    commandByte = 0x00;
+    dataByte = 0x00;
 }
 
 void reset() {
@@ -331,6 +371,12 @@ void setup()
     ucg.setFont(lucida_console);
     ucg.setColor(255, 255, 255);
     
+    pinMode(MENU_BTN, INPUT);
+    pinMode(SET_BTN, INPUT);
+    
+    
+    //digitalWrite(MENU_BTN, HIGH);
+    
     //ucg.setPrintPos(0, 0);
     //ucg.print("Test");
     
@@ -340,10 +386,47 @@ void setup()
     
     Wire.begin(4);
     Wire.onReceive(receiveEvent);
+    Wire.onRequest(requestEvent);
 }
 
 // Add loop code
 void loop()
 {
+    if (isShowingMenu == false && digitalRead(MENU_BTN) == LOW) {
+        menu.shouldShowController = true;
+        menu.show();
+    }
+    if (isShowingMenu == true && digitalRead(MENU_BTN) == HIGH) {
+        return;
+    }
     
+    setState = digitalRead(SET_BTN);
+    
+    if (setState != lastSetState) {
+        if (setState == LOW) {
+            setCounter++;
+        }
+        
+        delay(50);
+    }
+    
+    lastSetState = setState;
+    
+    if (setCounter % 2 == 0) {
+        //shouldUseMemory = false;
+
+        commandByte = 0x02;
+        dataByte = 0x00;
+
+        delay(100);
+        //ucg.setPrintPos(90, -1);
+        //ucg.setColor(0, 255, 0, 0);
+        //ucg.print("   ");
+    } else {
+        //shouldUseMemory = true;
+        commandByte = 0x02;
+        dataByte = 0x01;
+
+        delay(100);
+    }
 }

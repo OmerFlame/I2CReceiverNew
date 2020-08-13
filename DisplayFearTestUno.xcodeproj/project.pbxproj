@@ -58,6 +58,7 @@
 		590868E124C4A55600D40A21 /* LowPassFilter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 590868E024C4A55600D40A21 /* LowPassFilter.cpp */; };
 		590868E524C4A56800D40A21 /* HighPassFilter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 590868E424C4A56800D40A21 /* HighPassFilter.cpp */; };
 		5928684D24C49D2F00D40A21 /* DisplayFearTestUno.ino in Sources */ = {isa = PBXBuildFile; fileRef = 5908684D24C49D2F00D40A21 /* DisplayFearTestUno.ino */; };
+		59C5113724E5BCEE000B5CAD /* Menu.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 59C5113624E5BCEE000B5CAD /* Menu.cpp */; };
 		AA2A200719182437AA000005 /* Arduino.h in Sources */ = {isa = PBXBuildFile; fileRef = AAAA200719182437AA000005 /* Arduino.h */; };
 		AA2A200719182437AA000006 /* Client.h in Sources */ = {isa = PBXBuildFile; fileRef = AAAA200719182437AA000006 /* Client.h */; };
 		AA2A200719182437AA000007 /* HardwareSerial.h in Sources */ = {isa = PBXBuildFile; fileRef = AAAA200719182437AA000007 /* HardwareSerial.h */; };
@@ -295,6 +296,8 @@
 		590868E224C4A55C00D40A21 /* LowPassFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LowPassFilter.h; sourceTree = "<group>"; };
 		590868E324C4A56400D40A21 /* HighPassFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HighPassFilter.h; sourceTree = "<group>"; };
 		590868E424C4A56800D40A21 /* HighPassFilter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = HighPassFilter.cpp; sourceTree = "<group>"; };
+		59C5113524E5BCE6000B5CAD /* Menu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Menu.h; sourceTree = "<group>"; };
+		59C5113624E5BCEE000B5CAD /* Menu.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Menu.cpp; sourceTree = "<group>"; };
 		AAAA200719182437AA000005 /* Arduino.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Arduino.h; sourceTree = "<group>"; };
 		AAAA200719182437AA000006 /* Client.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Client.h; sourceTree = "<group>"; };
 		AAAA200719182437AA000007 /* HardwareSerial.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HardwareSerial.h; sourceTree = "<group>"; };
@@ -398,6 +401,8 @@
 				590867F324C49D2F00D40A21 /* Makefile */,
 				590868DE24C4A3E700D40A21 /* Filter.cpp */,
 				590868DD24C4A3E100D40A21 /* Filter.h */,
+				59C5113524E5BCE6000B5CAD /* Menu.h */,
+				59C5113624E5BCEE000B5CAD /* Menu.cpp */,
 				590868E024C4A55600D40A21 /* LowPassFilter.cpp */,
 				590868E224C4A55C00D40A21 /* LowPassFilter.h */,
 				590868E324C4A56400D40A21 /* HighPassFilter.h */,
@@ -535,7 +540,7 @@
 				590868A924C49D4F00D40A21 /* extras */,
 			);
 			name = Ucglib;
-			path = ../../../../Documents/Arduino/libraries/Ucglib;
+			path = ../../../../../Documents/Arduino/libraries/Ucglib;
 			sourceTree = "<group>";
 		};
 		5908686524C49D4F00D40A21 /* examples */ = {
@@ -1294,6 +1299,7 @@
 				AA2A200719182437AA00001E /* HID.h in Sources */,
 				AA2A200719182437AA000021 /* SPI.h in Sources */,
 				590868DF24C4A3E700D40A21 /* Filter.cpp in Sources */,
+				59C5113724E5BCEE000B5CAD /* Menu.cpp in Sources */,
 				AA2A200719182437AA000024 /* SoftwareSerial.h in Sources */,
 				590868C824C49D4F00D40A21 /* ucg_dev_oled_96x64_univision.c in Sources */,
 				AA2A200719182437AA000027 /* Wire.h in Sources */,
