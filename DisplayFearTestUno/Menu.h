@@ -191,6 +191,7 @@ public:
     bool shouldShowController = false;
     bool shouldShowSave = false;
     bool shouldShowLoad = false;
+    bool didJustExitMenu = false;
 };
 
 #endif // Menu____FILEEXTENSION___

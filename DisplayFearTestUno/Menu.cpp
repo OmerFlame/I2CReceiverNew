@@ -93,17 +93,19 @@ void MenuController::show() {
 
             if (digitalRead(SET_BTN) == LOW && _currentSelectionMain == 1) {
                 //loadMenu();
-                //Wire.begin(4);
+                /*Wire.begin(4);
                 comByte = 0x20;
                 datByte = 0x00;
-                //Wire.end();
                 
-                delay(10);
+                delay(100);
                 
                 comByte = 0x00;
                 datByte = 0x00;
+                Wire.end();
+                 */
                 //TWCR = 0;
                 //load(0);
+                saveMenu();
             }
 
             if (digitalRead(UP_BTN) == LOW && _currentSelectionMain == 0) {
@@ -151,7 +153,15 @@ void MenuController::show() {
 void MenuController::saveMenu() {
     _displayHandler.clearScreen();
     _displayHandler.setPrintPos(34, 0);
-    _displayHandler.print("SAVE");
+    //_displayHandler.print("SAVE");
+    
+    if (_currentSelectionMain == 0) {
+        _displayHandler.print("SAVE");
+    } else {
+        _displayHandler.print("LOAD");
+    }
+    
+    //_displayHandler.print("SAVE LOAD");
 
     /*_displayHandler.setPrintPos(0, _displayHandler.getCursorY() + 17);
     _displayHandler.print("1");
@@ -200,7 +210,9 @@ void MenuController::saveMenu() {
             shouldShowSave = false;
             comByte = 0x00;
             datByte = 0x00;
-            show();
+            //show();
+            
+            return;
         }
 
         if (shouldShowSave) {
@@ -234,7 +246,11 @@ void MenuController::saveMenu() {
             if (digitalRead(SET_BTN) == LOW) {
                 //save(_currentSelectionSave);
                 Wire.begin(4);
-                comByte = 0x10;
+                if (_currentSelectionMain == 0) {
+                    comByte = 0x10;
+                } else {
+                    comByte = 0x20;
+                }
                 datByte = (byte) _currentSelectionSave;
                 delay(100);
 
@@ -305,210 +321,23 @@ void MenuController::saveMenu() {
     }
 }
 
-/*void MenuController::save(int selection) {
-    Serial.println(String(selection) + ".txt");
-    if (SD.exists(String(selection) + ".txt")) {
-        SD.remove(String(selection) + ".txt");
-
-        fileToRW = SD.open(String(selection) + ".txt", FILE_WRITE);
-    } else {
-        fileToRW = SD.open(String(selection) + ".txt", FILE_WRITE);
-        fileToRW.close();
-
-        if(SD.exists(String(selection) + ".txt")) {
-            Serial.println("New file created");
-            fileToRW = SD.open(String(selection) + ".txt", FILE_WRITE);
-        }
-    }
-
-    if (fileToRW) {
-        //fileToRW.seek(0);
-
-        //fileToRW.println("This is a test");
-        //fileToRW.close();
-        for (int i = 0; i < 4; i++) {
-            long freqToSave = _filters[i].getFrequency();
-            float dbToSave = _filters[i].getDB();
-            int qToSave = _filters[i].getQ();
-
-            Serial.println(freqToSave);
-            Serial.println(String(dbToSave));
-            Serial.println(String(qToSave));
-
-            fileToRW.print("FILTER ");
-            fileToRW.print(String(i));
-            fileToRW.print(" ");
-            
-            fileToRW.print(String(freqToSave) + " ");
-            fileToRW.print(String(dbToSave) + " ");
-            fileToRW.print(String(qToSave) + " ");
-            
-            fileToRW.print("END ");
-        }
-        
-        long lpfFrequencyToSave = _lpf.get();
-        Serial.print("LPF: ");
-        Serial.println(lpfFrequencyToSave);
-        
-        fileToRW.print("LPF ");
-        fileToRW.print(String(lpfFrequencyToSave) + " ");
-        fileToRW.print("END ");
-        
-        fileToRW.print("ENDFIN");
-        fileToRW.close();
-
-        Serial.println("SUCCESS WRITING TO FILE!");
-    } else {
-        Serial.println("Unable to open the file");
-    }
-}*/
-
-/*void MenuController::load(int selection) {
-    int keywordCount = 0;
-    int currentCell = 0;
-    String fileContents = "";
-    String extractedKeyword = "";
-    long frequencyData;
-    float dbData;
-    int qData;
-    long lpfData;
-
-    if (SD.exists(String(selection) + ".txt")) {
-        fileToRW = SD.open(String(selection) + ".txt");
-    }
-
-    while (fileToRW.available()) {
-        char currentCharacter = fileToRW.read();
-        fileContents += currentCharacter;
-
-        if (currentCharacter == ' ') {
-            keywordCount++;
-        }
-    }
-
-    keywordCount++;
-
-    Serial.print("Keyword count: ");
-    Serial.println(String(keywordCount));
-
-    String extractedKeywords[keywordCount];
-
-    Serial.println(fileContents);
-
-    for (int i = 0; i <= fileContents.length() + 7; i++) {
-        if (fileContents[i] != ' ') {
-            extractedKeyword += fileContents[i];
-        }
-
-        if (fileContents[i] == ' ') {
-            extractedKeywords[currentCell] = extractedKeyword;
-            currentCell++;
-
-            Serial.print("The extracted keyword is: ");
-            Serial.println(extractedKeyword);
-            extractedKeyword = "";
-        }
-    }
-
-    fileToRW.close();
-
-    int currentFilter;
-    String lastKeyword;
-    parserSituations lastKeywordDescription;
-    for (int i = 0; i < keywordCount; i++) {
-        if (extractedKeywords[i] == "FILTER") {
-            lastKeyword = extractedKeywords[i];
-            lastKeywordDescription = FilterDeclaration;
-            continue;
-        }
-
-        if ((extractedKeywords[i] == "0" || "1" || "2" || "3") && (lastKeywordDescription == FilterDeclaration) && lastKeyword == "FILTER") {
-            currentFilter = extractedKeywords[i].toInt();
-            lastKeyword = extractedKeywords[i];
-            lastKeywordDescription = FilterIndex;
-            continue;
-        }
-
-        if (lastKeywordDescription == FilterIndex) {
-            frequencyData = strtol(extractedKeywords[i].c_str(), NULL, 10);
-            Serial.println(frequencyData);
-            lastKeyword = extractedKeywords[i];
-            lastKeywordDescription = FrequencyValue;
-            continue;
-        }
-
-        if ((extractedKeywords[i].indexOf(".") > 0) && (lastKeywordDescription == FrequencyValue)) {
-            dbData = extractedKeywords[i].toFloat();
-            Serial.println(dbData);
-            lastKeyword = extractedKeywords[i];
-            lastKeywordDescription = DBValue;
-            continue;
-        }
-
-        if ((lastKeyword.indexOf(".") > 0) && (lastKeywordDescription == DBValue)) {
-            qData = strtol(extractedKeywords[i].c_str(), NULL, 10);
-            Serial.println(extractedKeywords[i].c_str());
-            //Serial.println(int(test));
-            lastKeyword = extractedKeywords[i];
-            lastKeywordDescription = QValue;
-            continue;
-        }
-
-        if ((lastKeywordDescription == QValue) && (extractedKeywords[i] == "END")) {
-            lastKeyword = extractedKeywords[i];
-            lastKeywordDescription = EndFilterDeclaration;
-
-            _filters[currentFilter].setMemFrequency(frequencyData);
-            _filters[currentFilter].setMemDB(dbData);
-            _filters[currentFilter].setMemQ(qData);
-            continue;
-        }
-        
-        if ((lastKeywordDescription == EndFilterDeclaration) && (extractedKeywords[i] == "LPF")) {
-            lastKeyword = extractedKeywords[i];
-            lastKeywordDescription = LowPassFilterDeclaration;
-            continue;
-        }
-        
-        if ((lastKeywordDescription == LowPassFilterDeclaration)) {
-            lpfData = strtol(extractedKeywords[i].c_str(), NULL, 10);
-            lastKeyword = extractedKeywords[i];
-            lastKeywordDescription = LowPassFilterData;
-            continue;
-        }
-        
-        if ((lastKeywordDescription == LowPassFilterData) && (extractedKeywords[i] == "END")) {
-            _lpf.setMem(lpfData);
-            lastKeyword = extractedKeywords[i];
-            lastKeywordDescription = EndLowPassFilterDeclaration;
-            continue;
-        }
-
-        if (extractedKeywords[i] == "ENDFIN") {
-            break;
-        }
-    }
-
-    Serial.println("UPDATED VARIABLES!!");
-
-    Serial.print("FREQUENCY VALUE: ");
-    Serial.println(String(_filters[0].getMemFrequency()));
-
-    Serial.print("DB VALUE: ");
-    Serial.println(String(_filters[0].getMemDB()));
-    
-    Serial.print("Q VALUE: ");
-    Serial.println(String(_filters[0].getMemQ()));
-
-    Serial.println("CHECK IF THE OUTPUT MATCHES THE FILE CONTENTS!!!!!");
-
-    //*_parentMemoryBool = true;
-}*/
-
-void MenuController::loadMenu() {
+/*void MenuController::loadMenu() {
     _displayHandler.clearScreen();
     _displayHandler.setPrintPos(34, 0);
     _displayHandler.print("LOAD");
+    
+    for (int i = 1; i <= 8; i++) {
+        _displayHandler.setPrintPos(0, _displayHandler.getCursorY() + 17);
+        _displayHandler.print(i);
+        
+        //exclLoadCoords[i-1][0] = _displayHandler.getCursorX();
+        //exclLoadCoords[i-1][1] = _displayHandler.getCursorY();
+        
+        _displayHandler.print("   ");
+        
+        asterLoadCoords[i-1][0] = _displayHandler.getCursorX();
+        asterLoadCoords[i-1][1] = _displayHandler.getCursorY();
+    }
 
     shouldShowLoad = true;
 
@@ -516,11 +345,86 @@ void MenuController::loadMenu() {
     while (shouldShowLoad) {
         if (digitalRead(MENU_BTN) == LOW) {
             shouldShowLoad = false;
+            comByte = 0x00;
+            datByte = 0x00;
             show();
         }
         
+        _displayHandler.setPrintPos(asterLoadCoords[_currentSelectionLoad][0], asterLoadCoords[_currentSelectionLoad][1]);
+        _displayHandler.print("*");
+        
+        if (shouldShowLoad) {
+            if (digitalRead(SET_BTN) == LOW) {
+                //save(_currentSelectionSave);
+                Wire.begin(4);
+                comByte = 0x20;
+                datByte = (byte) _currentSelectionLoad;
+                delay(100);
+
+                comByte = 0x00;
+                datByte = 0x00;
+                Wire.end();
+                continue;
+            }
+
+            if (digitalRead(DOWN_BTN) == LOW) {
+                if (_currentSelectionLoad == 7) {
+                    continue;
+                }
+                
+                _displayHandler.setPrintPos(asterLoadCoords[_currentSelectionLoad][0], asterLoadCoords[_currentSelectionLoad][1]);
+                _displayHandler.print(" ");
+                
+                _currentSelectionLoad++;
+                
+                _displayHandler.setPrintPos(asterLoadCoords[_currentSelectionLoad][0], asterLoadCoords[_currentSelectionLoad][1]);
+                _displayHandler.print("*");
+                
+                delay(100);
+                continue;
+            }
+            
+            if (digitalRead(UP_BTN) == LOW) {
+                if (_currentSelectionLoad == 0) {
+                    continue;
+                }
+                
+                _displayHandler.setPrintPos(asterLoadCoords[_currentSelectionLoad][0], asterLoadCoords[_currentSelectionLoad][1]);
+                _displayHandler.print(" ");
+                
+                _currentSelectionLoad--;
+                
+                _displayHandler.setPrintPos(asterLoadCoords[_currentSelectionLoad][0], asterSaveCoords[_currentSelectionLoad][1]);
+                _displayHandler.print("*");
+                
+                delay(100);
+                continue;
+            }
+
+            /*if (digitalRead(DOWN_BTN) == LOW && _currentSelectionSave == 7) {
+                /*_displayHandler.setPrintPos(asterSaveCoords[_currentSelectionSave][0], asterSaveCoords[_currentSelectionSave][1]);
+                _displayHandler.print(" ");
+                
+                _currentSelectionSave = 0;
+                
+                delay(100);
+                //continue;
+            }
+
+            if (digitalRead(UP_BTN) == LOW && _currentSelectionSave == 0) {
+                /*_displayHandler.setPrintPos(asterSaveCoords[_currentSelectionSave][0], asterSaveCoords[_currentSelectionSave][1]);
+                _displayHandler.print(" ");
+                
+                _currentSelectionSave = 8;
+                
+                delay(100);
+                //continue;
+            }
+
+            
+        }
     }
-}
+}*/
 
 void MenuController::returnFunction() {
     _displayHandler.clearScreen();
@@ -570,8 +474,10 @@ void MenuController::returnFunction() {
     _hpf.begin();
     
     *_parentMenuBool = false;
+    didJustExitMenu = true;
     
-    TWCR = 0;
-    Wire.begin(4);
+    //TWCR = 0;
+    //Wire.begin(4);
+    //delay(100);
     return;
 }

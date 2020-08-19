@@ -216,21 +216,31 @@ void receiveEvent(int howMany) {
         ucg.setPrintPos(filters[0].frequencyX(), filters[0].frequencyY());
         ucg.setColor(255, 255, 0);
         
-        for (int i = 1; i < sizeof(buffer); i++) {
+        /*for (int i = 1; i < strlen(buffer + 1) + 1; i++) {
             ucg.print(buffer[i]);
-        }
-        Serial.println();
+        }*/
+        
+        ucg.print(buffer[1]);
+        ucg.print(buffer[2]);
+        ucg.print(buffer[3]);
+        //return;
+        //Serial.println();
     } else if (algoKey == 0x01) {
-        //filters[0].setTextDB(extractedKeywords[1]);
+        filters[0].setTextDB(extractedKeywords[1]);
         //Serial.println("0x01 RECEIVED");
         ucg.setPrintPos(filters[0].dbX(), filters[0].dbY());
         ucg.setColor(255, 255, 0);
         
-        for (int i = 1; i < sizeof(buffer); i++) {
+        /*for (int i = 1; i < sizeof(buffer); i++) {
             ucg.print(buffer[i]);
-        }
+        }*/
+        
+        ucg.print(buffer[1]);
+        ucg.print(buffer[2]);
+        ucg.print(buffer[3]);
+        ucg.print(buffer[4]);
     } else if (algoKey == 0x02) {
-        filters[0].setTextQ(extractedKeywords[1]);
+        //filters[0].setTextQ(extractedKeywords[1]);
         ucg.setPrintPos(filters[0].qX(), filters[0].qY());
         ucg.setColor(255, 255, 0);
         
@@ -241,16 +251,27 @@ void receiveEvent(int howMany) {
         ucg.setPrintPos(filters[1].frequencyX(), filters[1].frequencyY());
         ucg.setColor(0, 162, 255);
         
-        for (int i = 1; i < sizeof(buffer); i++) {
+        /*for (int i = 1; i < strlen(buffer + 1) + 1; i++) {
             ucg.print(buffer[i]);
-        }
+        }*/
+        
+        ucg.print(buffer[1]);
+        ucg.print(buffer[2]);
+        ucg.print(buffer[3]);
+        ucg.print(buffer[4]);
+        ucg.print(buffer[5]);
     } else if (algoKey == 0x11) {
         ucg.setPrintPos(filters[1].dbX(), filters[1].dbY());
         ucg.setColor(0, 162, 255);
         
-        for (int i = 1; i < sizeof(buffer); i++) {
+        /*for (int i = 1; i < sizeof(buffer); i++) {
             ucg.print(buffer[i]);
-        }
+        }*/
+        
+        ucg.print(buffer[1]);
+        ucg.print(buffer[2]);
+        ucg.print(buffer[3]);
+        ucg.print(buffer[4]);
     } else if (algoKey == 0x12) {
         ucg.setPrintPos(filters[1].qX(), filters[1].qY());
         ucg.setColor(0, 162, 255);
@@ -287,7 +308,10 @@ void receiveEvent(int howMany) {
         ucg.setPrintPos(filters[3].frequencyX(), filters[3].frequencyY());
         ucg.setColor(255, 0, 196);
         //ucg.print(buf);
-        for (int i = 1; i < sizeof(buffer); i++) {
+        /*for (int i = 1; i < sizeof(buffer); i++) {
+            ucg.print(buffer[i]);
+        }*/
+        for (int i = 1; i < 6; i++) {
             ucg.print(buffer[i]);
         }
         //ucg.setPrintPos(0, 2);
@@ -335,15 +359,21 @@ void receiveEvent(int howMany) {
         for (int i = 1; i < sizeof(buffer); i++) {
             ucg.print(buffer[i]);
         }
-    } else if (algoKey == 0x90) {
-        ucg.setPrintPos(90, 149);
-        ucg.setColor(0, 255, 0, 0);
+    }/* else if (algoKey == 0x90) {
+        ucg.setPrintPos(90, -1);
+        //ucg.setPrintPos(0, 133);
+        //ucg.setPrintDir(0);
+        ucg.setColor(255, 0, 0);
         ucg.print("MEM");
+        
+        ucg.setColor(1, 0, 0, 0);
     } else if (algoKey == 0x80) {
-        ucg.setPrintPos(90, 149);
-        ucg.setColor(0, 255, 0, 0);
+        //ucg.setPrintPos(0, 133);
+        ucg.setPrintPos(90, -1);
+        ucg.setPrintDir(0);
+        ucg.setColor(255, 0, 0);
         ucg.print("   ");
-    }
+    }*/
 }
 
 void requestEvent() {
@@ -379,6 +409,10 @@ void setup()
     
     //ucg.setPrintPos(0, 0);
     //ucg.print("Test");
+    
+    ucg.setPrintPos(90, -1);
+    
+    //ucg.print("M");
     
     initAllFilters();
     
@@ -428,5 +462,11 @@ void loop()
         dataByte = 0x01;
 
         delay(100);
+    }
+    
+    if (menu.didJustExitMenu) {
+        menu.didJustExitMenu = false;
+        TWCR = 0;
+        Wire.begin(4);
     }
 }
