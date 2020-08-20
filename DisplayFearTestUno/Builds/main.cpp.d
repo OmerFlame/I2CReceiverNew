@@ -14,6 +14,8 @@ Builds/main.cpp.o: main.cpp \
  /Users/omershamai/Documents/Arduino/libraries/Ucglib/src/Ucglib.h \
  /Applications/Arduino.app/Contents/Java/hardware/arduino/avr/cores/arduino/Print.h \
  /Users/omershamai/Documents/Arduino/libraries/Ucglib/src/clib/ucg.h \
+ /Users/omershamai/Documents/Arduino/libraries/JC_Button/src/JC_Button.h \
+ Menu.h Filter.h LowPassFilter.h HighPassFilter.h \
+ /Applications/Arduino.app/Contents/Java/hardware/arduino/avr/libraries/SPI/src/SPI.h \
  /Applications/Arduino.app/Contents/Java/hardware/arduino/avr/libraries/Wire/src/Wire.h \
- /Applications/Arduino.app/Contents/Java/hardware/arduino/avr/cores/arduino/Stream.h \
- Filter.h LowPassFilter.h HighPassFilter.h
+ /Applications/Arduino.app/Contents/Java/hardware/arduino/avr/cores/arduino/Stream.h

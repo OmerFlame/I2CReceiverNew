@@ -84,7 +84,6 @@ private:
     //File fileToRW;
         
     void returnFunction();
-    void saveMenu();
     void loadMenu();
     void(* resetFunc) (void) = 0;
 
@@ -98,8 +97,7 @@ private:
     
     byte (&comByte);
     byte (&datByte);
-
-    ucg_int_t _currentSelectionMain = 0;
+    
     ucg_int_t _currentSelectionSave = 0;
     ucg_int_t _currentSelectionLoad = 0;
 
@@ -188,10 +186,12 @@ private:
 public:
     MenuController(Ucglib_ST7735_18x128x160_HWSPI& displayHandler, bool* parentMenuBool, byte* commandByte, byte* dataByte, bool* parentMemoryBool, Filter (*filters)[4], LowPassFilter* lpf, HighPassFilter* hpf): _displayHandler(displayHandler), _parentMenuBool(parentMenuBool), _parentMemoryBool(parentMemoryBool), _filters(*filters), _lpf(*lpf), _hpf(*hpf), comByte(*commandByte), datByte(*dataByte) {};
     void show();
+    void saveMenu();
     bool shouldShowController = false;
     bool shouldShowSave = false;
     bool shouldShowLoad = false;
     bool didJustExitMenu = false;
+    ucg_int_t _currentSelectionMain = 0;
 };
 
 #endif // Menu____FILEEXTENSION___

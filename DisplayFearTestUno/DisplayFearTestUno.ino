@@ -37,6 +37,7 @@
 // Include application, user and local libraries
 // !!! Help http://bit.ly/2CL22Qp
 #include <Ucglib.h>
+#include <JC_Button.h>
 #include "Menu.h"
 #include <Wire.h>
 #include "Filter.h"
@@ -60,6 +61,7 @@
 
 #define MENU_BTN                        5
 #define SET_BTN                         4
+#define UP_BTN                          6
 
 #define SW_LO_PK                        3
 #define SW_MID2_PK                     22
@@ -81,6 +83,8 @@
 
 byte commandByte = 0x00;
 byte dataByte = 0x00;
+Button setBtn(SET_BTN);
+
 
 int setCounter = 0;
 int setState = 0;
@@ -393,7 +397,7 @@ void reset() {
 // Add setup code
 void setup()
 {
-    Serial.begin(9600);
+    //Serial.begin(9600);
     ucg.begin(UCG_FONT_MODE_SOLID);
     ucg.clearScreen();
     ucg.setFontPosTop();
@@ -401,8 +405,13 @@ void setup()
     ucg.setFont(lucida_console);
     ucg.setColor(255, 255, 255);
     
-    pinMode(MENU_BTN, INPUT);
-    pinMode(SET_BTN, INPUT);
+    pinMode(MENU_BTN, INPUT_PULLUP);
+    pinMode(SET_BTN, INPUT_PULLUP);
+    pinMode(DOWN_BTN, INPUT_PULLUP);
+    
+    setBtn.begin();
+    
+    //Serial.println("STARTED");
     
     
     //digitalWrite(MENU_BTN, HIGH);
@@ -434,7 +443,7 @@ void loop()
         return;
     }
     
-    setState = digitalRead(SET_BTN);
+    /*setState = digitalRead(SET_BTN);
     
     if (setState != lastSetState) {
         if (setState == LOW) {
@@ -462,11 +471,40 @@ void loop()
         dataByte = 0x01;
 
         delay(100);
-    }
+    }*/
     
     if (menu.didJustExitMenu) {
+        setBtn.read();
+        
         menu.didJustExitMenu = false;
         TWCR = 0;
+        
+        commandByte = 0x95;
+        
+        if (shouldUseMemory == true) {
+            dataByte = 0x00;
+        } else {
+            dataByte = 0x01;
+        }
+        
         Wire.begin(4);
+    }
+    
+    setBtn.read();
+    
+    if (setBtn.wasReleased()) {
+        if (shouldUseMemory == true) {
+            shouldUseMemory = false;
+            
+            commandByte = 0x02;
+            dataByte = 0x00;
+            delay(100);
+        } else {
+            shouldUseMemory = true;
+            commandByte = 0x02;
+            dataByte = 0x01;
+            
+            delay(100);
+        }
     }
 }

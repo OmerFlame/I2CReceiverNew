@@ -31,7 +31,7 @@ APP_LIBS_LIST = SPI Wire
 # default = 0 = none
 #
 #
-USER_LIBS_LIST = Ucglib
+USER_LIBS_LIST = Ucglib JC_Button
 
 LOCAL_LIBS_LIST = Filter LowPassFilter HighPassFilter
 
@@ -57,7 +57,7 @@ LOCAL_LIBS_LIST = Filter LowPassFilter HighPassFilter
 # !!! Help: http://bit.ly/2yUvq0h
 # If not defined, BOARD_PORT = /dev/tty.usb* (default)
 #
-#BOARD_PORT = /dev/tty.usbmodem*
+BOARD_PORT = /dev/cu.usbmodem14E01
 
 # Xcode takes SKETCHBOOK_DIR from preferences.txt
 # If not defined, each IDE has its own SKETCHBOOK_DIR (default)

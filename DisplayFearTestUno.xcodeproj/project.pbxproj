@@ -58,6 +58,8 @@
 		590868E124C4A55600D40A21 /* LowPassFilter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 590868E024C4A55600D40A21 /* LowPassFilter.cpp */; };
 		590868E524C4A56800D40A21 /* HighPassFilter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 590868E424C4A56800D40A21 /* HighPassFilter.cpp */; };
 		5928684D24C49D2F00D40A21 /* DisplayFearTestUno.ino in Sources */ = {isa = PBXBuildFile; fileRef = 5908684D24C49D2F00D40A21 /* DisplayFearTestUno.ino */; };
+		5956F1C124ED7670005E6297 /* JC_Button.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5956F1C024ED7670005E6297 /* JC_Button.cpp */; };
+		5956F1C224ED7680005E6297 /* JC_Button.h in Sources */ = {isa = PBXBuildFile; fileRef = 5956F1BF24ED7670005E6297 /* JC_Button.h */; };
 		59C5113724E5BCEE000B5CAD /* Menu.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 59C5113624E5BCEE000B5CAD /* Menu.cpp */; };
 		AA2A200719182437AA000005 /* Arduino.h in Sources */ = {isa = PBXBuildFile; fileRef = AAAA200719182437AA000005 /* Arduino.h */; };
 		AA2A200719182437AA000006 /* Client.h in Sources */ = {isa = PBXBuildFile; fileRef = AAAA200719182437AA000006 /* Client.h */; };
@@ -296,6 +298,17 @@
 		590868E224C4A55C00D40A21 /* LowPassFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LowPassFilter.h; sourceTree = "<group>"; };
 		590868E324C4A56400D40A21 /* HighPassFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HighPassFilter.h; sourceTree = "<group>"; };
 		590868E424C4A56800D40A21 /* HighPassFilter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = HighPassFilter.cpp; sourceTree = "<group>"; };
+		5956F1B024ED7670005E6297 /* LICENSE.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = LICENSE.md; sourceTree = "<group>"; };
+		5956F1B124ED7670005E6297 /* keywords.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = keywords.txt; sourceTree = "<group>"; };
+		5956F1B224ED7670005E6297 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		5956F1B324ED7670005E6297 /* CONTRIBUTING.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = CONTRIBUTING.md; sourceTree = "<group>"; };
+		5956F1B624ED7670005E6297 /* SimpleOnOff.ino */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SimpleOnOff.ino; sourceTree = "<group>"; };
+		5956F1B824ED7670005E6297 /* LongPress.ino */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LongPress.ino; sourceTree = "<group>"; };
+		5956F1BA24ED7670005E6297 /* Toggle.ino */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Toggle.ino; sourceTree = "<group>"; };
+		5956F1BC24ED7670005E6297 /* UpDown.ino */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = UpDown.ino; sourceTree = "<group>"; };
+		5956F1BD24ED7670005E6297 /* library.properties */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = library.properties; sourceTree = "<group>"; };
+		5956F1BF24ED7670005E6297 /* JC_Button.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JC_Button.h; sourceTree = "<group>"; };
+		5956F1C024ED7670005E6297 /* JC_Button.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = JC_Button.cpp; sourceTree = "<group>"; };
 		59C5113524E5BCE6000B5CAD /* Menu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Menu.h; sourceTree = "<group>"; };
 		59C5113624E5BCEE000B5CAD /* Menu.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Menu.cpp; sourceTree = "<group>"; };
 		AAAA200719182437AA000005 /* Arduino.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Arduino.h; sourceTree = "<group>"; };
@@ -397,12 +410,12 @@
 		590867F024C49D2F00D40A21 /* DisplayFearTestUno */ = {
 			isa = PBXGroup;
 			children = (
-				590867F124C49D2F00D40A21 /* main.cpp */,
 				590867F324C49D2F00D40A21 /* Makefile */,
 				590868DE24C4A3E700D40A21 /* Filter.cpp */,
 				590868DD24C4A3E100D40A21 /* Filter.h */,
 				59C5113524E5BCE6000B5CAD /* Menu.h */,
 				59C5113624E5BCEE000B5CAD /* Menu.cpp */,
+				590867F124C49D2F00D40A21 /* main.cpp */,
 				590868E024C4A55600D40A21 /* LowPassFilter.cpp */,
 				590868E224C4A55C00D40A21 /* LowPassFilter.h */,
 				590868E324C4A56400D40A21 /* HighPassFilter.h */,
@@ -422,6 +435,7 @@
 			isa = PBXGroup;
 			children = (
 				5908686224C49D4F00D40A21 /* Ucglib */,
+				5956F1AF24ED7670005E6297 /* JC_Button */,
 				590867F724C49D2F00D40A21 /* Sketchbook.txt */,
 			);
 			path = Sketchbook;
@@ -695,6 +709,73 @@
 				590868AE24C49D4F00D40A21 /* fontsize.pdf */,
 			);
 			path = extras;
+			sourceTree = "<group>";
+		};
+		5956F1AF24ED7670005E6297 /* JC_Button */ = {
+			isa = PBXGroup;
+			children = (
+				5956F1B024ED7670005E6297 /* LICENSE.md */,
+				5956F1B124ED7670005E6297 /* keywords.txt */,
+				5956F1B224ED7670005E6297 /* README.md */,
+				5956F1B324ED7670005E6297 /* CONTRIBUTING.md */,
+				5956F1B424ED7670005E6297 /* examples */,
+				5956F1BD24ED7670005E6297 /* library.properties */,
+				5956F1BE24ED7670005E6297 /* src */,
+			);
+			name = JC_Button;
+			path = ../../../../../Documents/Arduino/libraries/JC_Button;
+			sourceTree = "<group>";
+		};
+		5956F1B424ED7670005E6297 /* examples */ = {
+			isa = PBXGroup;
+			children = (
+				5956F1B524ED7670005E6297 /* SimpleOnOff */,
+				5956F1B724ED7670005E6297 /* LongPress */,
+				5956F1B924ED7670005E6297 /* Toggle */,
+				5956F1BB24ED7670005E6297 /* UpDown */,
+			);
+			path = examples;
+			sourceTree = "<group>";
+		};
+		5956F1B524ED7670005E6297 /* SimpleOnOff */ = {
+			isa = PBXGroup;
+			children = (
+				5956F1B624ED7670005E6297 /* SimpleOnOff.ino */,
+			);
+			path = SimpleOnOff;
+			sourceTree = "<group>";
+		};
+		5956F1B724ED7670005E6297 /* LongPress */ = {
+			isa = PBXGroup;
+			children = (
+				5956F1B824ED7670005E6297 /* LongPress.ino */,
+			);
+			path = LongPress;
+			sourceTree = "<group>";
+		};
+		5956F1B924ED7670005E6297 /* Toggle */ = {
+			isa = PBXGroup;
+			children = (
+				5956F1BA24ED7670005E6297 /* Toggle.ino */,
+			);
+			path = Toggle;
+			sourceTree = "<group>";
+		};
+		5956F1BB24ED7670005E6297 /* UpDown */ = {
+			isa = PBXGroup;
+			children = (
+				5956F1BC24ED7670005E6297 /* UpDown.ino */,
+			);
+			path = UpDown;
+			sourceTree = "<group>";
+		};
+		5956F1BE24ED7670005E6297 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				5956F1BF24ED7670005E6297 /* JC_Button.h */,
+				5956F1C024ED7670005E6297 /* JC_Button.cpp */,
+			);
+			path = src;
 			sourceTree = "<group>";
 		};
 		AAAA200719182437AA000000 /* Resources */ = {
@@ -1283,6 +1364,7 @@
 				AA2A200719182437AA00000D /* Server.h in Sources */,
 				AA2A200719182437AA00000E /* Stream.h in Sources */,
 				AA2A200719182437AA00000F /* USBAPI.h in Sources */,
+				5956F1C224ED7680005E6297 /* JC_Button.h in Sources */,
 				AA2A200719182437AA000010 /* USBCore.h in Sources */,
 				AA2A200719182437AA000011 /* USBDesc.h in Sources */,
 				590868D124C49D4F00D40A21 /* ucg_rotate.c in Sources */,
@@ -1326,6 +1408,7 @@
 				590868BC24C49D4F00D40A21 /* ucg_dev_default_cb.c in Sources */,
 				590868CB24C49D4F00D40A21 /* ucg_dev_ic_ili9341.c in Sources */,
 				AA2A200719182437AA000047 /* IPAddress.h in Sources */,
+				5956F1C124ED7670005E6297 /* JC_Button.cpp in Sources */,
 				AA2A200719182437AA000048 /* Print.h in Sources */,
 				590868B424C49D4F00D40A21 /* ucg_polygon.c in Sources */,
 				590868CC24C49D4F00D40A21 /* ucg_dev_ic_st7735.c in Sources */,

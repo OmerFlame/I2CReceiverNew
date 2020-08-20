@@ -22,46 +22,76 @@
 #include <Ucglib.h>
 #include "Menu.h"
 #include <Wire.h>
+#include <JC_Button.h>
 //#include <SD.h>
 //#include <SPI.h>
 
 class Ucglib_ST7735_18x128x160_HWSPI;
+Button menuBtn(5);
+
+const int SHORT_PRESS_TIME = 1000;
+const int LONG_PRESS_TIME  = 1000;
+
+int lastState = HIGH;
+int currentState;
+unsigned long pressedTime  = 0;
+unsigned long releasedTime = 0;
 
 void MenuController::show() {
-    
-  
     if(!shouldShowController) {
         resetFunc();
     } else {
+        menuBtn.begin();
         Wire.end();
         //TWCR = 0;
         _displayHandler.clearScreen();
         _displayHandler.setFont(ucg_font_inb16_mr);
     
-        _displayHandler.setPrintPos(0, 0);
+        _displayHandler.setPrintPos(34, 0);
 
         _displayHandler.print("MENU");
+        
+        //Serial.println("SHOWING MENU");
 
-        _displayHandler.setPrintPos(0, 30);
-        _displayHandler.print("SAVE   ");
+        //_displayHandler.setPrintPos(0, 30);
+        //_displayHandler.print("SAVE   ");
 
-        _asteriskMainSaveX = _displayHandler.getCursorX();
-        _asteriskMainSaveY = _displayHandler.getCursorY();
+        //_asteriskMainSaveX = _displayHandler.getCursorX();
+        //_asteriskMainSaveY = _displayHandler.getCursorY();
 
         //_displayHandler.print("*");
 
-        _displayHandler.setPrintPos(0, _asteriskMainSaveY + 17);
+        //_displayHandler.setPrintPos(0, _asteriskMainSaveY + 17);
 
-        _displayHandler.print("LOAD   ");
+        //_displayHandler.print("LOAD   ");
 
-        _asteriskMainLoadX = _displayHandler.getCursorX();
-        _asteriskMainLoadY = _displayHandler.getCursorY();
+        //_asteriskMainLoadX = _displayHandler.getCursorX();
+        //_asteriskMainLoadY = _displayHandler.getCursorY();
+        
+        for (int i = 1; i <= 8; i++) {
+            _displayHandler.setPrintPos(0, _displayHandler.getCursorY() + 17);
+            _displayHandler.print(i);
+            
+            exclSaveCoords[i-1][0] = _displayHandler.getCursorX();
+            exclSaveCoords[i-1][1] = _displayHandler.getCursorY();
+            
+            _displayHandler.print("   ");
+            
+            asterSaveCoords[i-1][0] = _displayHandler.getCursorX();
+            asterSaveCoords[i-1][1] = _displayHandler.getCursorY();
+        }
 
         shouldShowController = true;
+        
+        _displayHandler.setPrintPos(asterSaveCoords[_currentSelectionSave][0], asterSaveCoords[_currentSelectionSave][1]);
+        _displayHandler.print("*");
+        
+        menuBtn.read();
 
         while (shouldShowController)
         {
-            if (_currentSelectionMain == 0) {
+            menuBtn.read();
+            /*if (_currentSelectionMain == 0) {
                 _displayHandler.setPrintPos(_asteriskMainSaveX, _asteriskMainSaveY);
                 _displayHandler.print("*");
 
@@ -83,15 +113,106 @@ void MenuController::show() {
                 datByte = 0x00;
                 _displayHandler.clearScreen();
                 returnFunction();
+            }*/
+            
+            //currentState = digitalRead(MENU_BTN);
+            
+            /*if (currentState == LOW) {
+                shouldShowController = false;
+                *_parentMenuBool = false;
+                comByte = 0x00;
+                datByte = 0x00;
+                _displayHandler.clearScreen();
+                returnFunction();
+            }*/
+            
+            if (menuBtn.wasReleased()) {
+                if (_currentSelectionSave == 7) {
+                    _displayHandler.setPrintPos(asterSaveCoords[_currentSelectionSave][0], asterSaveCoords[_currentSelectionSave][1]);
+                    _displayHandler.print(" ");
+                    
+                    //continue;
+                    _currentSelectionSave = 0;
+                    
+                    _displayHandler.setPrintPos(asterSaveCoords[_currentSelectionSave][0], asterSaveCoords[_currentSelectionSave][1]);
+                    _displayHandler.print("*");
+                    continue;
+                }
+                
+                _displayHandler.setPrintPos(asterSaveCoords[_currentSelectionSave][0], asterSaveCoords[_currentSelectionSave][1]);
+                _displayHandler.print(" ");
+                
+                _currentSelectionSave++;
+                
+                _displayHandler.setPrintPos(asterSaveCoords[_currentSelectionSave][0], asterSaveCoords[_currentSelectionSave][1]);
+                _displayHandler.print("*");
+                //lastState = currentState;
+                delay(100);
+                continue;
+            } else if (menuBtn.pressedFor(LONG_PRESS_TIME)) {
+                shouldShowController = false;
+                //*_parentMenuBool = false;
+                comByte = 0x00;
+                datByte = 0x00;
+                _displayHandler.clearScreen();
+                returnFunction();
             }
+            
+            /*if (menuBtn.pressedFor(LONG_PRESS_TIME)) {
+                shouldShowController = false;
+                *_parentMenuBool = false;
+                comByte = 0x00;
+                datByte = 0x00;
+                _displayHandler.clearScreen();
+                returnFunction();
+                //return;
+            } else {
+                if (_currentSelectionSave == 7) {
+                    //continue;
+                    _currentSelectionSave = 0;
+                    continue;
+                }
+                
+                _displayHandler.setPrintPos(asterSaveCoords[_currentSelectionSave][0], asterSaveCoords[_currentSelectionSave][1]);
+                _displayHandler.print(" ");
+                
+                _currentSelectionSave++;
+                
+                _displayHandler.setPrintPos(asterSaveCoords[_currentSelectionSave][0], asterSaveCoords[_currentSelectionSave][1]);
+                _displayHandler.print("*");
+                //lastState = currentState;
+                delay(100);
+                continue;
+            }*/
+            
+            //Serial.print("currentState = ");
+            //Serial.println(String(currentState));
 
-            if (digitalRead(SET_BTN) == LOW && _currentSelectionMain == 0) {
+            if (digitalRead(SET_BTN) == LOW) {
                 //Wire.begin(4);
                 //delay(500);
-                saveMenu();
+                //saveMenu();
+                
+                comByte = 0x20;
+                datByte = (byte) _currentSelectionSave;
+                
+                Wire.begin(4);
+                //comByte = 0x20;
+                //datByte = (byte) _currentSelectionSave;
+                
+                delay(100);
+                
+                Wire.end();
+                
+                *_parentMemoryBool = true;
+                shouldShowController = false;
+                comByte = 0x00;
+                datByte = 0x00;
+                _displayHandler.clearScreen();
+                returnFunction();
             }
 
-            if (digitalRead(SET_BTN) == LOW && _currentSelectionMain == 1) {
+            if (digitalRead(DOWN_BTN) == LOW) {
                 //loadMenu();
                 /*Wire.begin(4);
                 comByte = 0x20;
@@ -105,10 +226,26 @@ void MenuController::show() {
                  */
                 //TWCR = 0;
                 //load(0);
-                saveMenu();
+                //saveMenu();
+                
+                comByte = 0x10;
+                datByte = (byte) _currentSelectionSave;
+                
+                Wire.begin(4);
+                
+                delay(100);
+                
+                Wire.end();
+                
+                *_parentMemoryBool = true;
+                shouldShowController = false;
+                comByte = 0x00;
+                datByte = 0x00;
+                _displayHandler.clearScreen();
+                returnFunction();
             }
 
-            if (digitalRead(UP_BTN) == LOW && _currentSelectionMain == 0) {
+            /*if (digitalRead(UP_BTN) == LOW && _currentSelectionMain == 0) {
                 _currentSelectionMain = 1;
                 _displayHandler.setPrintPos(_asteriskMainSaveX, _asteriskMainSaveY);
                 _displayHandler.print(" ");
@@ -146,8 +283,10 @@ void MenuController::show() {
                 _displayHandler.setPrintPos(_asteriskMainLoadX, _asteriskMainLoadY);
                 _displayHandler.print(" ");
                 delay(100);
-            }
-    }}
+            }*/
+            
+        }
+    }
 }
 
 void MenuController::saveMenu() {
@@ -206,13 +345,37 @@ void MenuController::saveMenu() {
 
     delay(100);
     while (shouldShowSave) {
-        if (digitalRead(MENU_BTN) == LOW) {
-            shouldShowSave = false;
-            comByte = 0x00;
-            datByte = 0x00;
-            //show();
+        currentState = digitalRead(MENU_BTN);
+        
+        if (lastState == HIGH && currentState == LOW) {
+            pressedTime = millis();
+        } else if (lastState == LOW && currentState == HIGH) {
+            releasedTime = millis();
             
-            return;
+            long pressDuration = releasedTime - pressedTime;
+            
+            if (pressDuration < SHORT_PRESS_TIME) {
+                if (_currentSelectionSave == 7) {
+                    //continue;
+                    _currentSelectionSave = 0;
+                    continue;
+                }
+                
+                _displayHandler.setPrintPos(asterSaveCoords[_currentSelectionSave][0], asterSaveCoords[_currentSelectionSave][1]);
+                _displayHandler.print(" ");
+                
+                _currentSelectionSave++;
+                
+                _displayHandler.setPrintPos(asterSaveCoords[_currentSelectionSave][0], asterSaveCoords[_currentSelectionSave][1]);
+                _displayHandler.print("*");
+                
+                delay(100);
+                continue;
+            }
+            
+            if (pressDuration > LONG_PRESS_TIME) {
+                return;
+            }
         }
 
         if (shouldShowSave) {
@@ -260,7 +423,7 @@ void MenuController::saveMenu() {
                 continue;
             }
 
-            if (digitalRead(DOWN_BTN) == LOW) {
+            /*if (digitalRead(DOWN_BTN) == LOW) {
                 if (_currentSelectionSave == 7) {
                     continue;
                 }
@@ -275,9 +438,9 @@ void MenuController::saveMenu() {
                 
                 delay(100);
                 continue;
-            }
+            }*/
             
-            if (digitalRead(UP_BTN) == LOW) {
+            if (digitalRead(DOWN_BTN) == LOW) {
                 if (_currentSelectionSave == 0) {
                     continue;
                 }
@@ -473,7 +636,7 @@ void MenuController::returnFunction() {
     _lpf.begin();
     _hpf.begin();
     
-    *_parentMenuBool = false;
+    //*_parentMenuBool = false;
     didJustExitMenu = true;
     
     //TWCR = 0;

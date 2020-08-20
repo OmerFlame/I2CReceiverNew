@@ -64,8 +64,8 @@ void LowPassFilter::setText(String replacementText) {
     if (shouldReadFromMemory) {
         setMem(atol(replacementText.c_str()));
     } else {
-        Serial.print("LPF SET TO: ");
-        Serial.println(String(atol(replacementText.c_str())));
+        //Serial.print("LPF SET TO: ");
+        //Serial.println(String(atol(replacementText.c_str())));
         
         set(atol(replacementText.c_str()));
     }
